@@ -5,7 +5,7 @@ async function loginUser() {
 
     try {
         // Send POST request to /login with username and password
-        const response = await axios.post('http://localhost:3000/login', {
+        const response = await axios.post('https://asora-backend.onrender.com/login', {
             username: username,
             password: password
         });

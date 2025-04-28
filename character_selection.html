@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Character Selection - Naruto Arena Remake</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .character-thumb {
+      width: 75px;
+      height: 75px;
+      background-color: white;
+      border: 1px solid black;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .character-thumb:hover {
+      transform: scale(1.1);
+    }
+    .skill-container {
+      position: relative;
+      width: 75px;
+      height: 75px;
+      background-color: white;
+      border: 1px solid black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      overflow: hidden;
+    }
+    .skill-desc {
+      display: none;
+      position: absolute;
+      background: rgba(0, 0, 0, 0.85);
+      color: white;
+      padding: 8px;
+      text-align: center;
+      font-size: 12px;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white flex flex-col min-h-screen">
+
+  <!-- Header -->
+  <div class="bg-gray-800 flex justify-between items-center p-4">
+    <button class="bg-red-500 px-4 py-2 rounded hover:bg-red-600 transition">Logout</button>
+
+    <div class="flex gap-4">
+      <button class="bg-yellow-500 px-4 py-2 rounded hover:bg-yellow-600 transition">Start Ladder Game</button>
+      <button class="bg-green-500 px-4 py-2 rounded hover:bg-green-600 transition">Start Quick Game</button>
+      <button class="bg-purple-500 px-4 py-2 rounded hover:bg-purple-600 transition">Start Private Game</button>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="flex flex-1">
+
+    <!-- Left Scroll (Characters) -->
+    <div class="bg-gray-800 w-1/2 p-6 overflow-y-auto">
+      <h2 class="text-2xl font-bold mb-4">Character Selection</h2>
+      <div id="characterGrid" class="grid grid-cols-5 gap-4"></div>
+    </div>
+
+    <!-- Right Panel (Character Info) -->
+    <div class="bg-gray-700 w-1/2 p-6 flex flex-col">
+      <h2 class="text-2xl font-bold mb-4">Character Details</h2>
+      <div id="characterDetails" class="flex flex-col items-center space-y-4">
+        <p>Select a character to view details!</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom Preview (Team Selection) -->
+  <div id="teamSelection" class="bg-gray-800 p-4 flex justify-center gap-8"></div>
+  <div class="flex justify-center mt-4">
+    <button onclick="saveCurrentTeam()" class="bg-green-600 hover:bg-green-700 px-6 py-3 rounded-xl text-lg">
+      Save Team
+    </button>
+  </div>
+  
+
+<!-- Script goes last -->
+<script>
+  let characters = [];
+  let team = [];
+  const maxTeamSize = 3;
+  let currentCharacter = null; // Keep track of selected character
+  
+  // Load characters from external JSON
+  fetch('characters.json')
+    .then(response => response.json())
+    .then(data => {
+      characters = data;
+      renderCharacterGrid();
+    })
+    .catch(error => {
+      console.error('Error loading characters.json:', error);
+    });
+  
+  // Render all characters in the grid
+  function renderCharacterGrid() {
+    const grid = document.getElementById('characterGrid');
+    grid.innerHTML = '';
+  
+    characters.forEach((char, index) => {
+      const div = document.createElement('div');
+      div.className = "character-thumb";
+      div.title = char.name;
+      div.onclick = () => selectCharacter(index);
+      div.ondblclick = () => addToTeam(index);
+      grid.appendChild(div);
+    });
+  }
+  
+  // Select character and show details
+  function selectCharacter(index) {
+    currentCharacter = characters[index];
+    const details = document.getElementById('characterDetails');
+  
+    details.innerHTML = `
+      <h3 id="charTitle" class="text-2xl font-bold mb-2">${currentCharacter.name}</h3>
+      <p class="text-gray-400 mb-2">${currentCharacter.tags.join(', ')}</p>
+  
+      <p id="charDescription" class="my-4 text-lg">${currentCharacter.description}</p>
+  
+      <div id="skills" class="flex gap-4 mt-4">
+        ${currentCharacter.skills.map((skill, i) => `
+          <div class="skill-container" onclick="showSkillDescription('${skill.name}', '${skill.desc}')">
+            <span class="text-black text-xs text-center px-1">${skill.name}</span>
+          </div>
+        `).join('')}
+      </div>
+  
+      <button onclick="showCharacterDescription()" class="mt-6 bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded">
+        Back to Character Info
+      </button>
+    `;
+  }
+  
+  // Show a skill's name and description when clicking it
+  function showSkillDescription(skillName, skillDesc) {
+    const titleElement = document.getElementById('charTitle');
+    const descElement = document.getElementById('charDescription');
+  
+    titleElement.innerText = skillName;
+    descElement.innerText = skillDesc;
+  }
+  
+  // Return to character's full description
+  function showCharacterDescription() {
+    if (!currentCharacter) return;
+  
+    const titleElement = document.getElementById('charTitle');
+    const descElement = document.getElementById('charDescription');
+  
+    titleElement.innerText = currentCharacter.name;
+    descElement.innerText = currentCharacter.description;
+  }
+  
+  // Double click to add character to team
+  function addToTeam(index) {
+    if (team.length < maxTeamSize && !team.includes(index)) {
+      team.push(index);
+      updateTeamSelection();
+    }
+  }
+  
+  // Update the bottom team bar
+  function updateTeamSelection() {
+    const teamDiv = document.getElementById('teamSelection');
+    teamDiv.innerHTML = team.map(i => `
+      <div class="character-thumb" title="${characters[i].name}"></div>
+    `).join('');
+  }
+  function saveCurrentTeam() {
+  if (team.length !== 3) {
+    alert("You must pick exactly 3 characters to save a team!");
+    return;
+  }
+
+  const teamName = prompt("Enter a name for your team:");
+  if (!teamName) {
+    alert("Team name is required!");
+    return;
+  }
+
+  // Load existing teams
+  let teams = JSON.parse(localStorage.getItem('teams')) || [];
+
+  // Create new team object
+  const newTeam = {
+    name: teamName,
+    characters: team.map(i => characters[i].name)
+  };
+
+  // Save it
+  teams.push(newTeam);
+  localStorage.setItem('teams', JSON.stringify(teams));
+
+  alert(`Team "${teamName}" saved!`);
+}
+
+  </script>
+  
+  
+
+</body>
+</html>

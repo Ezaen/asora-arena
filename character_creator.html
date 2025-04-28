@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Character Creator - Naruto Arena Remake (Advanced)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white min-h-screen flex flex-col items-center p-8">
+
+  <h1 class="text-4xl font-bold mb-8">Character Creator (Advanced)</h1>
+
+  <div class="w-full max-w-5xl">
+    <form id="characterForm" class="space-y-6">
+      <div>
+        <label class="block mb-2">Character Image:</label>
+        <input type="file" id="imageInput" accept="image/*" class="bg-gray-800 p-2 rounded w-full">
+      </div>
+      <div>
+        <label class="block mb-2">Character Name:</label>
+        <input type="text" id="charName" class="bg-gray-800 p-2 rounded w-full">
+      </div>
+      <div>
+        <label class="block mb-2">Character Tags (comma separated):</label>
+        <input type="text" id="charTags" class="bg-gray-800 p-2 rounded w-full">
+      </div>
+      <div>
+        <label class="block mb-2">Character Description:</label>
+        <textarea id="charDescription" class="bg-gray-800 p-2 rounded w-full" rows="3"></textarea>
+      </div>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Skills</h2>
+
+      <div id="skills" class="space-y-8">
+        <!-- Skill inputs will be generated here -->
+      </div>
+
+      <button type="button" onclick="generateCharacter()" class="bg-green-600 hover:bg-green-700 px-6 py-3 rounded text-lg">Save Character</button>
+    </form>
+
+    <div class="mt-10">
+      <h2 class="text-2xl font-bold mb-4">Generated JSON</h2>
+      <textarea id="output" class="bg-gray-800 p-4 rounded w-full h-96" readonly></textarea>
+    </div>
+  </div>
+
+<script>
+// Chakra colors and their mapping
+const chakraColors = ['black', 'yellow', 'green', 'blue', 'red'];
+
+// Generate 4 empty skill inputs initially
+const skillsDiv = document.getElementById('skills');
+for (let i = 0; i < 4; i++) {
+  const skillBlock = document.createElement('div');
+  skillBlock.className = "bg-gray-800 p-4 rounded";
+  skillBlock.innerHTML = `
+    <label class="block mb-2">Skill ${i+1} Image:</label>
+    <input type="file" id="skillImage${i}" accept="image/*" class="bg-gray-700 p-2 rounded w-full mb-4">
+
+    <label class="block mb-2">Skill ${i+1} Name:</label>
+    <input type="text" id="skillName${i}" class="bg-gray-700 p-2 rounded w-full mb-4">
+
+    <label class="block mb-2">Skill ${i+1} Description:</label>
+    <textarea id="skillDesc${i}" class="bg-gray-700 p-2 rounded w-full mb-4" rows="2"></textarea>
+
+    <label class="block mb-2">Skill ${i+1} Cooldown:</label>
+    <input type="number" id="skillCooldown${i}" value="0" class="bg-gray-700 p-2 rounded w-full mb-4">
+
+    <label class="block mb-2">Skill ${i+1} Classes (comma separated):</label>
+    <input type="text" id="skillClasses${i}" class="bg-gray-700 p-2 rounded w-full mb-4">
+
+    <label class="block mb-2">Skill ${i+1} Chakra Cost:</label>
+    <div id="chakraContainer${i}" class="flex gap-2 mb-4">
+      ${chakraColors.map(color => `<div onclick="toggleChakra(this)" data-color="${color}" class="w-8 h-8 rounded-full border-2 border-white cursor-pointer" style="background-color: ${color};"></div>`).join('')}
+    </div>
+  `;
+  skillsDiv.appendChild(skillBlock);
+}
+
+function toggleChakra(element) {
+  element.classList.toggle('ring-4');
+  element.classList.toggle('ring-white');
+}
+
+function generateCharacter() {
+  const name = document.getElementById('charName').value.trim();
+  const tags = document.getElementById('charTags').value.split(',').map(tag => tag.trim());
+  const description = document.getElementById('charDescription').value.trim();
+  const imageFile = document.getElementById('imageInput').files[0];
+
+  if (!name || !description || !imageFile) {
+    alert('Please fill in all fields and upload an image!');
+    return;
+  }
+
+  const imagePath = `images/characters/${imageFile.name}`;
+
+  const skills = [];
+  for (let i = 0; i < 4; i++) {
+    const skillName = document.getElementById(`skillName${i}`).value.trim();
+    const skillDesc = document.getElementById(`skillDesc${i}`).value.trim();
+    const skillCooldown = parseInt(document.getElementById(`skillCooldown${i}`).value);
+    const skillClasses = document.getElementById(`skillClasses${i}`).value.trim();
+    const skillImageFile = document.getElementById(`skillImage${i}`).files[0];
+
+    if (!skillName || !skillDesc || skillImageFile == undefined) {
+      alert('Please fill out all fields for each skill and upload skill images!');
+      return;
+    }
+
+    const skillImagePath = `images/skills/${skillImageFile.name}`;
+
+    const chakraSelected = Array.from(document.querySelectorAll(`#chakraContainer${i} div.ring-4`)).map(el => el.getAttribute('data-color'));
+
+    skills.push({
+      name: skillName,
+      desc: skillDesc,
+      image: skillImagePath,
+      cooldown: skillCooldown,
+      classes: skillClasses,
+      chakra: chakraSelected
+    });
+  }
+
+  const character = {
+    name,
+    tags,
+    description,
+    image: imagePath,
+    skills
+  };
+
+  document.getElementById('output').value = JSON.stringify(character, null, 2);
+}
+</script>
+
+</body>
+</html>

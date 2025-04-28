@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Raiku Tenma",
+    "tags": [
+      "First",
+      "Best",
+      "Tenma Clan",
+      "Hidden Tempest Village"
+    ],
+    "description": "A talented academy graduate starting to enter real missions. Not fully mature or polished, but huge potential and a bit of a rebel inside his own village.",
+    "image": "images/characters/1.png",
+    "skills": [
+      {
+        "name": "Rasengan",
+        "desc": "Deals 40 damage to 1 enemy.",
+        "image": "images/skills/2.png",
+        "cooldown": 3,
+        "classes": "Chakra, Instant",
+        "chakra": [
+          "black",
+          "blue"
+        ]
+      },
+      {
+        "name": "Lighning Clones",
+        "desc": "Tenma creates 2 lighning clones gaining 15 destructible defense.",
+        "image": "images/skills/3.png",
+        "cooldown": 2,
+        "classes": "Chakra, Instant",
+        "chakra": [
+          "black"
+        ]
+      },
+      {
+        "name": "Quick Kick",
+        "desc": "Tenma deals 30 damage to one enemy. This skill deals 15 more damage if Lightning Clones is active.",
+        "image": "images/skills/4.png",
+        "cooldown": 0,
+        "classes": "Physical, Instant",
+        "chakra": [
+          "green"
+        ]
+      },
+      {
+        "name": "Block",
+        "desc": "This skill makes Tenma invulnerable for 1 turn.",
+        "image": "images/skills/5.png",
+        "cooldown": 4,
+        "classes": "Physical, Instant",
+        "chakra": [
+          "black"
+        ]
+      }
+    ]
+  }
+]

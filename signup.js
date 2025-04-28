@@ -6,7 +6,7 @@ async function registerUser() {
 
     try {
         // Make a POST request to the backend /register route
-        const response = await axios.post('http://localhost:3000/register', {
+        const response = await axios.post('https://asora-backend.onrender.com/register', {
             username: username,
             email: email,
             password: password

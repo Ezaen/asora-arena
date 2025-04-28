@@ -1,26 +1,24 @@
 // Function to handle user login
 async function loginUser() {
-    const username = document.getElementById('username').value; // Get username from the input field
-    const password = document.getElementById('password').value; // Get password from the input field
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
 
     try {
-        // Send POST request to /login with username and password
+        // Send POST request to backend API for login
         const response = await axios.post('https://asora-backend.onrender.com/login', {
             username: username,
             password: password
         });
 
-        // If successful, show the success message and store the JWT token
-        alert(response.data.message);  // "Login successful!"
-        const token = response.data.token;
-
-        // Save the JWT token in localStorage for future requests
-        localStorage.setItem('jwtToken', token);
-
-        // Redirect the user to the lobby page or dashboard
-        window.location.href = 'lobby.html'; // Redirect to a protected page after login
+        // If successful, alert and redirect to the lobby page
+        alert('Login successful!');
+        window.location.href = 'lobby.html'; // Redirect to the lobby page after successful login
     } catch (error) {
-        // Handle errors (invalid credentials)
-        alert('Error: ' + error.response.data.message);
+        // Handle any errors (invalid credentials, API errors, etc.)
+        console.error('Login error:', error);
+        alert('Error: ' + (error.response ? error.response.data.message : 'An unexpected error occurred.'));
     }
 }
+
+// Add event listener to the login button
+document.getElementById('login-button').addEventListener('click', loginUser);

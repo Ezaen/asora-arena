@@ -1,22 +1,30 @@
 // Function to handle user registration
-async function registerUser() {
-    const username = document.getElementById('username').value; // Get username from the form input
-    const email = document.getElementById('email').value; // Get email from the form input
-    const password = document.getElementById('password').value; // Get password from the form input
+async function registerUser(event) {
+    event.preventDefault();  // Prevent the form from submitting the default way
+
+    const username = document.getElementById('username').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
 
     try {
-        // Make a POST request to the backend /register route
         const response = await axios.post('https://asora-backend.onrender.com/register', {
             username: username,
             email: email,
             password: password
         });
 
-        // If successful, alert the success message
+        // If successful, show the success message and redirect
         alert(response.data.message);  // "User registered successfully!"
-        window.location.href = 'login.html'; // Redirect to the login page after successful registration
+        window.location.href = 'login.html'; // Redirect to login page after successful registration
     } catch (error) {
-        // Handle any errors (username already taken, etc.)
-        alert('Error: ' + error.response.data.message);
+        // Handle any errors (missing fields, duplicate username, etc.)
+        if (error.response && error.response.data && error.response.data.message) {
+            alert('Error: ' + error.response.data.message);
+        } else {
+            alert('An unexpected error occurred. Please try again later.');
+        }
     }
 }
+
+// Attach the registerUser function to the form submit event
+document.getElementById('signupForm').addEventListener('submit', registerUser);

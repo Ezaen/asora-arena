@@ -1,11 +1,19 @@
 // login.js
-const form = document.getElementById('loginForm');
+console.log("Login script loaded");
 
-form.addEventListener('submit', async (e) => {
+const form = document.getElementById('loginForm');
+const loginButton = document.getElementById('login-button');
+
+loginButton.addEventListener('click', async (e) => {
   e.preventDefault();
 
-  const email = document.getElementById('email').value.trim().toLowerCase();
+  const email = document.getElementById('username').value.trim().toLowerCase();
   const password = document.getElementById('password').value;
+
+  if (!email || !password) {
+    alert('Both fields are required.');
+    return;
+  }
 
   try {
     const response = await axios.post('https://asora-backend.onrender.com/login', {
@@ -14,9 +22,11 @@ form.addEventListener('submit', async (e) => {
     });
 
     alert(response.data.message);
-    // Optionally redirect on success
-    // window.location.href = '/dashboard.html';
+    // Example: store token and redirect
+    // localStorage.setItem('token', response.data.token);
+    // window.location.href = 'profile.html';
   } catch (error) {
+    console.error('Login error:', error);
     alert(error.response?.data?.message || 'Login failed');
   }
 });

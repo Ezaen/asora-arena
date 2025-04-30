@@ -24,7 +24,8 @@ form.addEventListener('submit', async (e) => {
 
     // Store token and redirect to profile
     localStorage.setItem('token', response.data.token);
-    window.location.href = 'profile.html';
+    console.log("Redirecting to profile.html");
+    window.location.assign('profile.html');
   } catch (error) {
     console.error('Login error:', error);
     alert(error.response?.data?.message || 'Login failed');

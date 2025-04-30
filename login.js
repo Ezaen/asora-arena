@@ -2,16 +2,15 @@
 console.log("Login script loaded");
 
 const form = document.getElementById('loginForm');
-const loginButton = document.getElementById('login-button');
 
-loginButton.addEventListener('click', async (e) => {
+form.addEventListener('submit', async (e) => {
   e.preventDefault();
 
-  const email = document.getElementById('username').value.trim().toLowerCase();
+  const email = document.getElementById('email').value.trim().toLowerCase();
   const password = document.getElementById('password').value;
 
   if (!email || !password) {
-    alert('Both fields are required.');
+    alert('Email and password are required.');
     return;
   }
 
@@ -22,9 +21,10 @@ loginButton.addEventListener('click', async (e) => {
     });
 
     alert(response.data.message);
-    // Example: store token and redirect
-    // localStorage.setItem('token', response.data.token);
-    // window.location.href = 'profile.html';
+
+    // Store token and redirect to profile
+    localStorage.setItem('token', response.data.token);
+    window.location.href = 'profile.html';
   } catch (error) {
     console.error('Login error:', error);
     alert(error.response?.data?.message || 'Login failed');

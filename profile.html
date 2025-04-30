@@ -6,27 +6,41 @@
   <title>Profile - Naruto Arena Remake</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-900 text-white flex items-center justify-center min-h-screen">
-
-  <div class="bg-gray-800 rounded-2xl shadow-lg p-8 w-full max-w-md text-center">
-    <h1 class="text-3xl font-bold mb-6">Player Profile</h1>
-
-    <div class="flex flex-col items-center space-y-4">
-      <img src="https://via.placeholder.com/75" alt="Avatar" class="rounded-full border-4 border-gray-700">
-      
-      <div>
-        <h2 class="text-2xl font-semibold">Username: <span class="text-yellow-400">PlaceholderName</span></h2>
-        <p class="text-lg">Rank: <span class="text-green-400">Genin</span></p>
-        <p class="text-lg">Clan: <span class="text-blue-400">No Clan</span></p>
-      </div>
+<body class="bg-[#1e1e1e] text-white min-h-screen flex items-center justify-center">
+  <div class="bg-[#2b2b2b] w-[600px] p-6 rounded-lg shadow-lg flex gap-4 items-center">
+    <!-- Avatar -->
+    <div class="w-[75px] h-[75px] flex-shrink-0 border border-white">
+      <img id="avatar" src="avatar.png" alt="Avatar" class="w-full h-full object-cover">
     </div>
 
-    <div class="mt-8">
-      <a href="lobby.html" class="inline-block mt-4 bg-purple-500 hover:bg-purple-600 px-6 py-3 rounded-xl transition text-lg">
-        Back to Lobby
-      </a>
+    <!-- Profile Details -->
+    <div class="flex-1">
+      <h1 id="username" class="text-2xl font-bold mb-1">Username</h1>
+      <p id="rank" class="text-sm text-gray-400">Rank: Genin</p>
+      <p id="clan" class="text-sm text-gray-400">Clan: None</p>
+      <p id="wins" class="text-sm text-green-400 mt-2">Wins: 0</p>
+      <p id="losses" class="text-sm text-red-400">Losses: 0</p>
     </div>
   </div>
 
+  <script>
+    // Example placeholder (you'll want to fetch real data)
+    document.addEventListener("DOMContentLoaded", () => {
+      const token = localStorage.getItem("token");
+      if (!token) {
+        window.location.href = "login.html";
+        return;
+      }
+
+      // TODO: Fetch user data from backend
+      // Here we simulate it
+      document.getElementById("username").textContent = "Feathers";
+      document.getElementById("rank").textContent = "Rank: Chuunin";
+      document.getElementById("clan").textContent = "Clan: Akatsuki";
+      document.getElementById("wins").textContent = "Wins: 12";
+      document.getElementById("losses").textContent = "Losses: 5";
+      document.getElementById("avatar").src = "https://via.placeholder.com/75";
+    });
+  </script>
 </body>
 </html>

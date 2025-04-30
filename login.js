@@ -1,24 +1,22 @@
-// Function to handle user login
-async function loginUser() {
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
+// login.js
+const form = document.getElementById('loginForm');
 
-    try {
-        // Send POST request to backend API for login
-        const response = await axios.post('https://asora-backend.onrender.com/login', {
-            username: username,
-            password: password
-        });
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
 
-        // If successful, alert and redirect to the lobby page
-        alert('Login successful!');
-        window.location.href = 'lobby.html'; // Redirect to the lobby page after successful login
-    } catch (error) {
-        // Handle any errors (invalid credentials, API errors, etc.)
-        console.error('Login error:', error);
-        alert('Error: ' + (error.response ? error.response.data.message : 'An unexpected error occurred.'));
-    }
-}
+  const email = document.getElementById('email').value.trim().toLowerCase();
+  const password = document.getElementById('password').value;
 
-// Add event listener to the login button
-document.getElementById('login-button').addEventListener('click', loginUser);
+  try {
+    const response = await axios.post('https://asora-backend.onrender.com/login', {
+      email,
+      password
+    });
+
+    alert(response.data.message);
+    // Optionally redirect on success
+    // window.location.href = '/dashboard.html';
+  } catch (error) {
+    alert(error.response?.data?.message || 'Login failed');
+  }
+});

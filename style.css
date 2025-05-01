@@ -1,19 +1,19 @@
+/* === GLOBAL STYLES === */
 body {
+    background-color: #b03134;
     margin: 0;
-    background: #b03134;
     font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
   }
   
-  #layout.sitebg2 {
+  .sitebg2 {
     width: 1560px;
     height: 6460px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin: 0 auto;
+    position: relative;
+    background-color: #b03134;
   }
   
+  /* === TOP SECTION === */
   #top {
     display: flex;
     flex-direction: row;
@@ -22,21 +22,21 @@ body {
   #logo {
     width: 768px;
     height: 434px;
-    background: url("https://i.imgur.com/sBdbNkf.png") no-repeat right;
-    background-size: 500px 660px;
-    display: flex;
-    flex-direction: row;
+    background-image: url('https://i.imgur.com/sBdbNkf.png');
+    background-repeat: no-repeat;
+    background-size: contain;
     position: relative;
   }
   
   #mainnavigation {
+    position: absolute;
+    top: 24px;
+    left: 24px;
     width: 374px;
     height: 408px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    padding: 12px;
-    z-index: 1;
+    z-index: 10;
   }
   
   .nav-button {
@@ -52,25 +52,34 @@ body {
   #header {
     width: 790.92px;
     height: 433.46px;
+    margin-left: 2px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    margin-left: 0;
+    justify-content: space-between;
   }
   
   #headerimg, #randomheader {
     width: 788px;
     border: 2px solid black;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   
   #headerimg {
     height: 146px;
-    background: url("https://i.imgur.com/Bx7v07p.png") no-repeat center/cover;
+    background-image: url('https://i.imgur.com/Bx7v07p.png');
   }
   
   #randomheader {
     height: 287.46px;
-    background: url("https://i.imgur.com/EyTFK1r.png") no-repeat center/cover;
+    background-image: url('https://i.imgur.com/EyTFK1r.png');
+  }
+  
+  /* === CONTENT WRAPPER === */
+  #content-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
   }
   
   #sitenavigation1 {
@@ -78,15 +87,16 @@ body {
     height: 2851.28px;
     display: flex;
     flex-direction: row;
-    margin-top: 0;
+    justify-content: flex-start;
   }
   
   #leftlay, #rightlay {
-    background: #3a484b;
+    background-color: #3a484b;
     color: white;
     padding: 20px;
-    font-size: 28px;
     border: 2px solid black;
+    font-size: 28px;
+    box-sizing: border-box;
   }
   
   #leftlay {
@@ -103,15 +113,52 @@ body {
   #container1 {
     width: 791.46px;
     height: 6024.18px;
+    background: white;
+    padding: 40px;
+    box-sizing: border-box;
+  }
+  
+  h1, h2, h4, p, ul, li, input, label, a, b {
+    font-size: 28px;
+  }
+  
+  input[type="text"], input[type="password"] {
+    font-size: 28px;
+    padding: 10px;
+    width: 95%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  
+  input[type="submit"], input[type="button"] {
+    font-size: 28px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .block {
+    font-size: 30px;
+    font-weight: bold;
     margin-top: 20px;
   }
   
-  /* Increase login form size */
-  input[type="text"],
-  input[type="password"],
-  input[type="submit"],
-  input[type="button"],
-  label {
+  ul.newst, ul {
+    padding-left: 20px;
+  }
+  
+  ul li {
+    margin-bottom: 10px;
+  }
+  
+  .newsheader {
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 30px;
+  }
+  
+  .news {
     font-size: 28px;
+    margin-bottom: 20px;
   }
   

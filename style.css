@@ -1,8 +1,8 @@
-/* style.css */
-
+/* General Styles */
 body {
     margin: 0;
-    background: #fc0;
+    padding: 0;
+    background-color: #fc0;
     font-family: Arial, sans-serif;
   }
   
@@ -12,85 +12,95 @@ body {
     align-items: center;
   }
   
-  #top-banner {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    background-color: #fc0;
-  }
-  
+  /* Logo section: left side nav buttons and character */
   #logo {
     display: flex;
-    padding: 10px;
-    align-items: center;
-    gap: 20px;
-    position: relative;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
   }
   
   #mainnavigation {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    justify-content: center;
+    margin-right: 20px;
     z-index: 2;
   }
   
-  .nav-button {
-    width: 260px;
-    height: 44px;
-    background-size: cover;
+  #mainnavigation button {
+    background: transparent;
+    border: none;
+    margin-bottom: 10px;
+    width: 220px;
+    height: 45px;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    border: none;
-    font-weight: bold;
-    font-size: 14px;
-    color: #000;
+    font-size: 0;
     cursor: pointer;
   }
   
+  #mainnavigation button:nth-child(1) { background-image: url("https://i.imgur.com/d7KfuGs.png"); }
+  #mainnavigation button:nth-child(2) { background-image: url("https://i.imgur.com/oy5HWqH.png"); }
+  #mainnavigation button:nth-child(3) { background-image: url("https://i.imgur.com/NgoOB7g.png"); }
+  #mainnavigation button:nth-child(4) { background-image: url("https://i.imgur.com/AdIAnVp.png"); }
+  #mainnavigation button:nth-child(5) { background-image: url("https://i.imgur.com/2JRNtMK.png"); }
+  #mainnavigation button:nth-child(6) { background-image: url("https://i.imgur.com/FGT7mNs.png"); }
+  
   #sidechar {
-    position: absolute;
-    right: -140px;
-    top: 50%;
-    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
     z-index: 1;
   }
   
   #sidechar img {
-    height: 280px;
+    height: 290px;
   }
   
-  #banner-right {
+  /* Header with 2 banner images */
+  #header {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    border-left: 1px solid black;
+    margin-top: 10px;
   }
   
-  #banner-logo {
-    width: 100%;
-    max-width: 400px;
+  #header img {
+    width: 600px;
+    height: auto;
+    border: 1px solid black;
+    display: block;
   }
   
-  #banner-image {
-    width: 100%;
-    max-width: 400px;
-  }
-  
+  /* Site Navigation */
   #sitenavigation1 {
     display: flex;
     width: 100%;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
+    margin-top: 10px;
   }
   
-  #leftlay, #rightlay {
+  #leftlay,
+  #rightlay {
     background: #4285f4;
     color: white;
     padding: 10px;
     width: 300px;
     border: 1px solid black;
     font-size: 14px;
+    box-sizing: border-box;
   }
   
+  #rightlay {
+    margin-left: 10px;
+  }
+  
+  /* Ladder visuals */
   .levelBackground {
     width: 49px;
     height: 14px;
@@ -114,7 +124,9 @@ body {
     color: black;
   }
   
-  input, select, textarea {
+  input,
+  select,
+  textarea {
     border: 1px solid black;
   }
   
@@ -146,22 +158,18 @@ body {
     margin-bottom: 8px;
   }
   
-  /* Responsive design */
-  @media screen and (max-width: 768px) {
-    #top-banner {
-      flex-direction: column;
-      align-items: center;
-    }
+  /* Container1 below header */
+  #container1 {
+    width: 600px;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
   
+  /* Responsive */
+  @media (max-width: 768px) {
     #logo {
       flex-direction: column;
       align-items: center;
-    }
-  
-    #sidechar {
-      position: static;
-      transform: none;
-      margin-top: 20px;
     }
   
     #sitenavigation1 {
@@ -169,12 +177,16 @@ body {
       align-items: center;
     }
   
-    #leftlay, #rightlay {
+    #leftlay,
+    #rightlay {
       width: 90%;
+      margin-bottom: 10px;
     }
   
-    .nav-button {
-      width: 220px;
+    #header img,
+    #container1 {
+      width: 100%;
+      max-width: 100%;
     }
   }
   

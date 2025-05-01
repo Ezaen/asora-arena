@@ -9,40 +9,40 @@
 </head>
 
 <body>
-  <div class="top-container">
-    <div class="mainnavigation">
-      <img src="https://i.imgur.com/d7KfuGs.png" alt="Startpage">
-      <img src="https://i.imgur.com/oy5HWqH.png" alt="Start Playing">
-      <img src="https://i.imgur.com/NgoOB7g.png" alt="Game Manual">
-      <img src="https://i.imgur.com/AdIAnVp.png" alt="Ladders">
-      <img src="https://i.imgur.com/2JRNtMK.png" alt="Ninja Missions">
-      <img src="https://i.imgur.com/FGT7mNs.png" alt="Chat">
-    </div>
-    <div class="sidechar-container">
-      <img src="https://i.imgur.com/CBJsD1A.png" alt="Side Character" class="sidechar" />
-    </div>
-    <div class="topbanner">
-      <img src="https://i.imgur.com/Bx7v07p.png" alt="Logo" class="bannerlogo">
-      <img src="https://i.imgur.com/EyTFK1r.png" alt="Header Image" class="bannerheader">
-    </div>
-  </div>
-
   <div class="layout">
+
+    <div id="logo">
+      <div id="mainnavigation">
+        <img src="/images/buttons/startpage.png" alt="Startpage">
+        <img src="/images/buttons/startplaying.png" alt="Start Playing">
+        <img src="/images/buttons/gamemanual.png" alt="Game Manual">
+        <img src="/images/buttons/ladders.png" alt="Ladders">
+        <img src="/images/buttons/ninjamissions.png" alt="Ninja Missions">
+        <img src="/images/buttons/enterchat.png" alt="Enter Chat Room">
+      </div>
+      <div id="sidechar">
+        <img src="/images/sidechar.png" alt="Side Character">
+      </div>
+    </div>
+
+    <div id="header">
+      <img src="/images/toplogo.png" class="topbanner" alt="Top Logo">
+      <img src="/images/topimage.png" class="topbanner" alt="Top Image">
+    </div>
+
     <div id="sitenavigation1">
       <div id="leftlay">
-        <div class="login-section">
-          <h4 class="block">Account</h4>
-          <input type="text" value="runcanandrei@gmail.com" />
-          <br />
-          <input type="password" value="********" />
-          <br />
-          <input type="checkbox" id="stayLogged" /> Stay logged in
-          <br />
-          <input type="submit" value="Login" />
-          <input type="button" value="Register" />
-          <br />
-          <a href="#">Lost your password?</a>
-        </div>
+        <h4 class="block">Account</h4>
+        <input type="text" value="runcanandrei@gmail.com" />
+        <br />
+        <input type="password" value="********" />
+        <br />
+        <input type="checkbox" id="stayLogged" /> Stay logged in
+        <br />
+        <input type="submit" value="Login" />
+        <input type="button" value="Register" />
+        <br />
+        <a href="#">Lost your password?</a>
 
         <h4 class="block">Latest news</h4>
         <ul>
@@ -61,7 +61,7 @@
         <img src="placeholder.png" width="200" alt="Screenshot" />
 
         <h4 class="block">First time playing?</h4>
-        <p><b>Note:</b> If this is your first time playing, be sure to check out <b>The Basics</b> before you start battling.</p>
+        <p><b>Note:</b> Check <b>The Basics</b> before you start battling.</p>
 
         <h4 class="block">Top 10 Ladder</h4>
         <ul class="ladder">
@@ -92,6 +92,11 @@
         </ul>
       </div>
     </div>
+
+    <div id="container1">
+      <!-- Future content like news posts or event details can go here -->
+    </div>
+
   </div>
 </body>
 

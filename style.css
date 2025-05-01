@@ -25,21 +25,21 @@ body {
     height: 434px;
     background-image: url('https://imgur.com/UlwIQP0.png');
     background-repeat: no-repeat;
-    background-size: contain;
-    background-position: top right;
+    background-size: cover; /* Fills full div */
+    background-position: top left;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 24px; /* match previous #mainnavigation offset */
   }
   
   #mainnavigation {
-    position: absolute;
-    top: 24px;
-    left: 24px;
-    width: 374px;
-    height: 408px;
-    display: flex;
-    flex-direction: column;
-    z-index: 10;
-  }
+  width: 374px;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+}
   
   .nav-button {
     width: 395px;

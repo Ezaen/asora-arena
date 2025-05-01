@@ -1,157 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Naruto Arena - Layout Fix</title>
+  <title>Naruto Arena Clone</title>
+  <link rel="stylesheet" href="styles.css" />
   <style>
     body {
       margin: 0;
+      background: #fc0;
       font-family: Arial, sans-serif;
-      background: #f3e100;
     }
-    #layout {
+
+    .layout {
       display: flex;
       flex-direction: column;
-      width: 100%;
-      margin: auto;
+      align-items: center;
     }
+
     #logo {
       display: flex;
-      justify-content: center;
+      width: 100%;
+      height: 217px;
+      background: #fc0;
+    }
+
+    #mainnavigation {
+      display: flex;
+      flex-direction: column;
       padding: 10px;
     }
-    #mainnavigation a img {
-      display: block;
-      margin: 4px auto;
+
+    #mainnavigation a {
+      margin-bottom: 6px;
+    }
+
+    #mainnavigation img {
+      width: 200px;
       border: 1px solid black;
     }
-    #header {
+
+    #sidechar {
+      width: 184px;
       display: flex;
-      height: 200px;
-      background: url("/web/20170214015133im_/http://www.naruto-arena.com/images/randomheader/header25.jpg") center/cover no-repeat;
+      align-items: center;
+      justify-content: center;
     }
+
+    #sidechar img {
+      height: 180px;
+    }
+
     #sitenavigation1 {
       display: flex;
-      padding: 10px;
+      width: 100%;
     }
+
     #leftlay, #rightlay {
-      width: 50%;
+      background: #4285f4;
+      color: white;
       padding: 10px;
-    }
-    .nav {
-      background-color: #3399ff;
-      padding: 10px;
+      width: 300px;
       border: 1px solid black;
+      font-size: 14px;
     }
-    .ladder .levelBackground {
-      position: relative;
+
+    #rightlay {
+      margin-left: 10px;
+    }
+
+    .levelBackground {
       width: 49px;
       height: 14px;
-      background: white;
+      background-color: #ccc;
+      position: relative;
       border: 1px solid black;
-      margin-top: 4px;
+      margin-bottom: 5px;
     }
-    .ladder .levelFill {
-      position: absolute;
-      height: 14px;
+
+    .levelFill {
+      height: 100%;
       background-color: gold;
-      border-right: 1px solid black;
     }
-    .ladder .levelNumber {
+
+    .levelNumber {
       position: absolute;
-      right: -24px;
-      top: -1px;
-      font-size: 12px;
+      top: 0;
+      left: 0;
+      font-size: 10px;
+      padding: 0 2px;
+      color: black;
+    }
+
+    input, select, textarea {
+      border: 1px solid black;
+    }
+
+    .login-section input[type="text"], .login-section input[type="password"] {
+      width: 90%;
+      margin-bottom: 5px;
+    }
+
+    .login-section input[type="submit"], .login-section input[type="button"] {
+      margin: 5px 5px 5px 0;
+      border: 1px solid black;
+      cursor: pointer;
+    }
+
+    h4.block {
+      margin-top: 1em;
+      margin-bottom: 0.5em;
       font-weight: bold;
     }
+
+    .ladder {
+      list-style: none;
+      padding-left: 0;
+    }
+
     .ladder li {
       margin-bottom: 8px;
     }
-    .ladder1 {
-      font-weight: bold;
-    }
-    .block {
-      margin-top: 10px;
-      font-size: 16px;
-      font-weight: bold;
-    }
-    .button, input[type="text"], input[type="password"] {
-      border: 1px solid black;
-    }
-    .button {
-      padding: 4px 8px;
-      cursor: pointer;
-    }
-    input[type="checkbox"] {
-      margin-right: 4px;
-    }
   </style>
 </head>
+
 <body>
-  <div id="layout" class="sitebg2">
+  <div class="layout">
     <div id="logo">
       <div id="mainnavigation">
-        <a href="#"><img src="https://i.imgur.com/d7KfuGs.png" alt="Startpage" /></a>
-        <a href="#"><img src="https://i.imgur.com/oy5HWqH.png" alt="Start Playing" /></a>
-        <a href="#"><img src="https://i.imgur.com/NgoOB7g.png" alt="Game Manual" /></a>
-        <a href="#"><img src="https://i.imgur.com/AdIAnVp.png" alt="Ladders" /></a>
-        <a href="#"><img src="https://i.imgur.com/2JRNtMK.png" alt="Ninja Missions" /></a>
-        <a href="#"><img src="https://i.imgur.com/FGT7mNs.png" alt="Chat" /></a>
+        <a href="#"><img src="https://i.imgur.com/d7KfuGs.png" alt="Startpage"></a>
+        <a href="#"><img src="https://i.imgur.com/oy5HWqH.png" alt="Start Playing"></a>
+        <a href="#"><img src="https://i.imgur.com/NgoOB7g.png" alt="Game Manual"></a>
+        <a href="#"><img src="https://i.imgur.com/AdIAnVp.png" alt="Ladders"></a>
+        <a href="#"><img src="https://i.imgur.com/2JRNtMK.png" alt="Ninja Missions"></a>
+        <a href="#"><img src="https://i.imgur.com/FGT7mNs.png" alt="Chat"></a>
+      </div>
+      <div id="sidechar">
+        <img src="https://i.imgur.com/CBJsD1A.png" alt="Side Character" />
       </div>
     </div>
-    <div id="header"></div>
+
     <div id="sitenavigation1">
       <div id="leftlay">
-        <div class="nav">
+        <div class="login-section">
           <h4 class="block">Account</h4>
-          <form>
-            <input type="text" value="username"><br>
-            <input type="password" value="password"><br>
-            <input type="checkbox" id="stay"> <label for="stay">Stay logged in</label><br>
-            <input class="button" type="submit" value="Login">
-            <input class="button" type="button" value="Register">
-          </form>
+          <input type="text" value="runcanandrei@gmail.com" />
+          <br />
+          <input type="password" value="********" />
+          <br />
+          <input type="checkbox" id="stayLogged" /> Stay logged in
+          <br />
+          <input type="submit" value="Login" />
+          <input type="button" value="Register" />
+          <br />
+          <a href="#">Lost your password?</a>
         </div>
+
+        <h4 class="block">Latest news</h4>
+        <ul>
+          <li>Balance update coming soon</li>
+          <li>New characters released</li>
+          <li>Clan event next week</li>
+        </ul>
+
+        <h4 class="block">Statistics</h4>
+        <p>Members: 1,000,000</p>
+        <p>Online: 250</p>
       </div>
+
       <div id="rightlay">
-        <div class="nav">
-          <h4 class="block">Top 10 Ladder</h4>
-          <ul class="ladder">
-            <li>
-              <span class="ladder1">01</span>
-              <div class="player">
-                <span>Al-Saher</span><br>
-                <div class="levelBackground">
-                  <div class="levelFill" style="width:49px;"></div>
-                  <div class="levelNumber">68</div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <span class="ladder1">02</span>
-              <div class="player">
-                <span>Poderoso-Castiga</span><br>
-                <div class="levelBackground">
-                  <div class="levelFill" style="width:42px;"></div>
-                  <div class="levelNumber">64</div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <span class="ladder1">03</span>
-              <div class="player">
-                <span>Arya*Stark</span><br>
-                <div class="levelBackground">
-                  <div class="levelFill" style="width:32px;"></div>
-                  <div class="levelNumber">52</div>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
+        <h4 class="block">Random Screenshot</h4>
+        <img src="https://i.imgur.com/JNMuH8r.png" width="200" alt="Screenshot" />
+
+        <h4 class="block">First time playing?</h4>
+        <p><b>Note:</b> If this is your first time playing, be sure to check out <b>The Basics</b> before you start battling.</p>
+
+        <h4 class="block">Top 10 Ladder</h4>
+        <ul class="ladder">
+          <li>1. Al-Saher <div class="levelBackground"><div class="levelFill" style="width: 49px;"></div><div class="levelNumber">68</div></div></li>
+          <li>2. Poderoso-Castiga <div class="levelBackground"><div class="levelFill" style="width: 44px;"></div><div class="levelNumber">64</div></div></li>
+          <li>3. AyraStark <div class="levelBackground"><div class="levelFill" style="width: 40px;"></div><div class="levelNumber">52</div></div></li>
+        </ul>
+
+        <h4 class="block">Top 10 Clan Ladder</h4>
+        <ul class="ladder">
+          <li>1. Game Of Thrones <div class="levelBackground"><div class="levelFill" style="width: 48px;"></div><div class="levelNumber">90</div></div></li>
+          <li>2. Age of Pirates <div class="levelBackground"><div class="levelFill" style="width: 43px;"></div><div class="levelNumber">89</div></div></li>
+          <li>3. DEADPOOL <div class="levelBackground"><div class="levelFill" style="width: 41px;"></div><div class="levelNumber">84</div></div></li>
+        </ul>
+
+        <h4 class="block">Top 10 Most Wins</h4>
+        <ul>
+          <li>1. saintseiya – 19205 wins</li>
+          <li>2. denishendaye – 18243 wins</li>
+          <li>3. calefa – 13804 wins</li>
+        </ul>
+
+        <h4 class="block">Top 10 Winstreak</h4>
+        <ul>
+          <li>1. budai111 – 90 streak</li>
+          <li>2. KingSeidouh – 88 streak</li>
+          <li>3. AL-Saher – 85 streak</li>
+        </ul>
       </div>
     </div>
   </div>
 </body>
+
 </html>

@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Naruto Arena Clone</title>
+  <link rel="stylesheet" href="styles.css" />
   <style>
     body {
       margin: 0;
@@ -19,74 +20,56 @@
     }
 
     #logo {
-      display: flex;
-      width: 100%;
-      height: auto;
-      background: #fc0;
       position: relative;
+      width: 100%;
+      height: 250px;
+      background: #fc0;
+      display: flex;
+      justify-content: flex-start;
+      padding-left: 30px;
     }
 
     #mainnavigation {
       display: flex;
       flex-direction: column;
-      padding: 20px 10px;
-      gap: 12px;
+      padding-top: 10px;
+      z-index: 2;
     }
 
     #mainnavigation button {
       width: 220px;
-      height: 42px;
-      font-weight: bold;
-      font-size: 14px;
+      height: 35px;
+      margin-bottom: 8px;
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
-      background-color: transparent;
       border: none;
+      font-weight: bold;
+      font-size: 12px;
       cursor: pointer;
-      color: black;
     }
 
-    #mainnavigation button:nth-child(1) {
-      background-image: url("https://i.imgur.com/d7KfuGs.png");
-    }
-
-    #mainnavigation button:nth-child(2) {
-      background-image: url("https://i.imgur.com/oy5HWqH.png");
-    }
-
-    #mainnavigation button:nth-child(3) {
-      background-image: url("https://i.imgur.com/NgoOB7g.png");
-    }
-
-    #mainnavigation button:nth-child(4) {
-      background-image: url("https://i.imgur.com/AdIAnVp.png");
-    }
-
-    #mainnavigation button:nth-child(5) {
-      background-image: url("https://i.imgur.com/2JRNtMK.png");
-    }
-
-    #mainnavigation button:nth-child(6) {
-      background-image: url("https://i.imgur.com/FGT7mNs.png");
-    }
+    #mainnavigation button:nth-child(1) { background-image: url('https://i.imgur.com/d7KfuGs.png'); }
+    #mainnavigation button:nth-child(2) { background-image: url('https://i.imgur.com/oy5HWqH.png'); }
+    #mainnavigation button:nth-child(3) { background-image: url('https://i.imgur.com/NgoOB7g.png'); }
+    #mainnavigation button:nth-child(4) { background-image: url('https://i.imgur.com/AdIAnVp.png'); }
+    #mainnavigation button:nth-child(5) { background-image: url('https://i.imgur.com/2JRNtMK.png'); }
+    #mainnavigation button:nth-child(6) { background-image: url('https://i.imgur.com/FGT7mNs.png'); }
 
     #sidechar {
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      margin-left: -30px;
-      padding-top: 20px;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
     }
 
     #sidechar img {
-      height: 310px;
+      height: 270px;
     }
 
     #sitenavigation1 {
       display: flex;
       width: 100%;
-      padding: 20px;
     }
 
     #leftlay, #rightlay {

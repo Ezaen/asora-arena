@@ -1,185 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Naruto Arena - Home</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Naruto Arena - Layout Fix</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
-      background: #fc0;
       font-family: Arial, sans-serif;
+      background: #f3e100;
     }
-
-    .layout {
-      width: 100%;
+    #layout {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      width: 100%;
+      margin: auto;
     }
-
     #logo {
       display: flex;
-      background-color: #fc0;
-      width: 100%;
-      max-width: 1024px;
-      height: 217px;
-      position: relative;
-    }
-
-    #mainnavigation {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+      justify-content: center;
       padding: 10px;
     }
-
     #mainnavigation a img {
-      width: 150px;
+      display: block;
+      margin: 4px auto;
       border: 1px solid black;
     }
-
-    .sidechar {
-      position: absolute;
-      bottom: 0;
-      left: 175px;
-      height: 170px;
-    }
-
     #header {
-      width: 100%;
-      max-width: 1024px;
       display: flex;
+      height: 200px;
+      background: url("/web/20170214015133im_/http://www.naruto-arena.com/images/randomheader/header25.jpg") center/cover no-repeat;
     }
-
-    #headerimg {
-      flex: 1;
-      background: url('https://upload.wikimedia.org/wikipedia/en/8/84/Kakashi_anime.png') center/contain no-repeat;
-      background-color: white;
-      border: 1px solid black;
-    }
-
-    #randomheader {
-      flex: 3;
-      background: url('https://www.naruto-arena.com/images/randomheader/header25.jpg') center/cover no-repeat;
-      border: 1px solid black;
-    }
-
     #sitenavigation1 {
       display: flex;
-      width: 100%;
-      max-width: 1024px;
+      padding: 10px;
     }
-
     #leftlay, #rightlay {
-      background-color: #3a8bff;
-      color: white;
+      width: 50%;
+      padding: 10px;
+    }
+    .nav {
+      background-color: #3399ff;
       padding: 10px;
       border: 1px solid black;
     }
-
-    #leftlay {
-      width: 240px;
-    }
-
-    #rightlay {
-      flex: 1;
-    }
-
-    .level-bar {
+    .ladder .levelBackground {
+      position: relative;
       width: 49px;
       height: 14px;
-      background: gray;
+      background: white;
       border: 1px solid black;
-      position: relative;
-      margin-bottom: 5px;
+      margin-top: 4px;
     }
-
-    .level-fill {
-      height: 100%;
-      background: yellow;
-    }
-
-    .level-number {
+    .ladder .levelFill {
       position: absolute;
-      right: 3px;
-      top: 0;
-      font-size: 10px;
-      color: black;
+      height: 14px;
+      background-color: gold;
+      border-right: 1px solid black;
+    }
+    .ladder .levelNumber {
+      position: absolute;
+      right: -24px;
+      top: -1px;
+      font-size: 12px;
       font-weight: bold;
     }
-
-    #container1 {
-      width: 100%;
-      max-width: 1024px;
-      padding: 10px;
-      background: white;
+    .ladder li {
+      margin-bottom: 8px;
+    }
+    .ladder1 {
+      font-weight: bold;
+    }
+    .block {
+      margin-top: 10px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .button, input[type="text"], input[type="password"] {
+      border: 1px solid black;
+    }
+    .button {
+      padding: 4px 8px;
+      cursor: pointer;
+    }
+    input[type="checkbox"] {
+      margin-right: 4px;
     }
   </style>
 </head>
 <body>
-  <div class="layout">
+  <div id="layout" class="sitebg2">
     <div id="logo">
       <div id="mainnavigation">
-        <a href="#"><img src="https://i.imgur.com/pG5ZfVf.png" alt="Startpage"></a>
-        <a href="#"><img src="https://i.imgur.com/pG5ZfVf.png" alt="Start Playing"></a>
-        <a href="#"><img src="https://i.imgur.com/pG5ZfVf.png" alt="Game Manual"></a>
-        <a href="#"><img src="https://i.imgur.com/pG5ZfVf.png" alt="Ladders"></a>
-        <a href="#"><img src="https://i.imgur.com/pG5ZfVf.png" alt="Ninja Missions"></a>
-        <a href="#"><img src="https://i.imgur.com/pG5ZfVf.png" alt="Chat"></a>
+        <a href="#"><img src="https://i.imgur.com/d7KfuGs.png" alt="Startpage" /></a>
+        <a href="#"><img src="https://i.imgur.com/oy5HWqH.png" alt="Start Playing" /></a>
+        <a href="#"><img src="https://i.imgur.com/NgoOB7g.png" alt="Game Manual" /></a>
+        <a href="#"><img src="https://i.imgur.com/AdIAnVp.png" alt="Ladders" /></a>
+        <a href="#"><img src="https://i.imgur.com/2JRNtMK.png" alt="Ninja Missions" /></a>
+        <a href="#"><img src="https://i.imgur.com/FGT7mNs.png" alt="Chat" /></a>
       </div>
-      <img class="sidechar" src="https://i.imgur.com/yBFRI8Y.png" alt="Kakashi">
     </div>
-    <div id="header">
-      <div id="headerimg"></div>
-      <div id="randomheader"></div>
-    </div>
+    <div id="header"></div>
     <div id="sitenavigation1">
       <div id="leftlay">
-        <h4 class="block">Account</h4>
-        <input type="text" placeholder="Username" style="border: 1px solid black; width: 100%;"><br>
-        <input type="password" placeholder="Password" style="border: 1px solid black; width: 100%;"><br>
-        <label><input type="checkbox"> Stay logged in</label><br>
-        <button style="border: 1px solid black;">Login</button>
-        <button style="border: 1px solid black;">Register</button>
-        <p><a href="#">Lost your password?</a></p>
-        <h4>Latest News</h4>
-        <ul>
-          <li>Balance update coming soon</li>
-          <li>New characters released</li>
-          <li>Clan event next week</li>
-        </ul>
-        <h4>Statistics</h4>
-        <p>Members: 1,000,000<br>Online: 250</p>
+        <div class="nav">
+          <h4 class="block">Account</h4>
+          <form>
+            <input type="text" value="username"><br>
+            <input type="password" value="password"><br>
+            <input type="checkbox" id="stay"> <label for="stay">Stay logged in</label><br>
+            <input class="button" type="submit" value="Login">
+            <input class="button" type="button" value="Register">
+          </form>
+        </div>
       </div>
       <div id="rightlay">
-        <h4>Random Screenshot</h4>
-        <img src="https://via.placeholder.com/150x100?text=Screenshot" style="border: 1px solid black;">
-        <h4>First time playing?</h4>
-        <p><b>Note:</b> If this is your first time playing, be sure to check out the <b>The Basics</b> before you start battling.</p>
-        <h4>Top 10 Ladder</h4>
-        <ol>
-          <li>AL~Saher<div class="level-bar"><div class="level-fill" style="width: 49px"></div><div class="level-number">68</div></div></li>
-          <li>Poderoso~Castiga<div class="level-bar"><div class="level-fill" style="width: 45px"></div><div class="level-number">64</div></div></li>
-          <li>Arya*Stark<div class="level-bar"><div class="level-fill" style="width: 40px"></div><div class="level-number">52</div></div></li>
-        </ol>
-        <h4>Top 10 Clan Ladder</h4>
-        <ol>
-          <li>Game Of Thrones<div class="level-bar"><div class="level-fill" style="width: 49px"></div><div class="level-number">90</div></div></li>
-          <li>Age of Pirates<div class="level-bar"><div class="level-fill" style="width: 40px"></div><div class="level-number">89</div></div></li>
-          <li>DEADPOOL<div class="level-bar"><div class="level-fill" style="width: 44px"></div><div class="level-number">84</div></div></li>
-        </ol>
+        <div class="nav">
+          <h4 class="block">Top 10 Ladder</h4>
+          <ul class="ladder">
+            <li>
+              <span class="ladder1">01</span>
+              <div class="player">
+                <span>Al-Saher</span><br>
+                <div class="levelBackground">
+                  <div class="levelFill" style="width:49px;"></div>
+                  <div class="levelNumber">68</div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="ladder1">02</span>
+              <div class="player">
+                <span>Poderoso-Castiga</span><br>
+                <div class="levelBackground">
+                  <div class="levelFill" style="width:42px;"></div>
+                  <div class="levelNumber">64</div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="ladder1">03</span>
+              <div class="player">
+                <span>Arya*Stark</span><br>
+                <div class="levelBackground">
+                  <div class="levelFill" style="width:32px;"></div>
+                  <div class="levelNumber">52</div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <div id="container1">
-      <h1>Naruto Arena</h1>
-      <h2>Your #1 Naruto Online Multiplayer Game</h2>
-      <a href="#">Holiday Havoc Registration 2016</a>
-      <p>The eighth installment of Naruto-Board's Holiday Havoc tournament has begun registration. Please read the first post before registering. We hope to see you there.</p>
     </div>
   </div>
 </body>

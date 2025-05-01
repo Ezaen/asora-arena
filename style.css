@@ -17,6 +17,7 @@ body {
   #top {
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
   }
   
   #logo {
@@ -25,6 +26,7 @@ body {
     background-image: url('https://i.imgur.com/sBdbNkf.png');
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: top right;
     position: relative;
   }
   
@@ -49,6 +51,7 @@ body {
     cursor: pointer;
   }
   
+  /* === HEADER SECTION === */
   #header {
     width: 790.92px;
     height: 433.46px;
@@ -80,8 +83,11 @@ body {
     display: flex;
     flex-direction: row;
     gap: 20px;
+    align-items: flex-start;
+    margin-top: 10px;
   }
   
+  /* === LEFT & RIGHT LAYOUTS === */
   #sitenavigation1 {
     width: 768px;
     height: 2851.28px;
@@ -110,6 +116,7 @@ body {
     margin-left: 20px;
   }
   
+  /* === CONTAINER1 === */
   #container1 {
     width: 791.46px;
     height: 6024.18px;
@@ -118,6 +125,7 @@ body {
     box-sizing: border-box;
   }
   
+  /* === ELEMENT STYLES === */
   h1, h2, h4, p, ul, li, input, label, a, b {
     font-size: 28px;
   }

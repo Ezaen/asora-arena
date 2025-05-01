@@ -1,8 +1,6 @@
-/* General Styles */
 body {
     margin: 0;
-    padding: 0;
-    background-color: #fc0;
+    background: #b03134;
     font-family: Arial, sans-serif;
   }
   
@@ -12,95 +10,57 @@ body {
     align-items: center;
   }
   
-  /* Logo section: left side nav buttons and character */
   #logo {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
     width: 100%;
-    padding: 10px 20px;
-    box-sizing: border-box;
+    height: 217px;
+    background: #fc0;
   }
   
   #mainnavigation {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin-right: 20px;
-    z-index: 2;
+    padding: 10px;
   }
   
   #mainnavigation button {
-    background: transparent;
-    border: none;
+    width: 200px;
+    padding: 10px;
     margin-bottom: 10px;
-    width: 220px;
-    height: 45px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    font-size: 0;
+    font-weight: bold;
+    border: 1px solid black;
     cursor: pointer;
   }
   
-  #mainnavigation button:nth-child(1) { background-image: url("https://i.imgur.com/d7KfuGs.png"); }
-  #mainnavigation button:nth-child(2) { background-image: url("https://i.imgur.com/oy5HWqH.png"); }
-  #mainnavigation button:nth-child(3) { background-image: url("https://i.imgur.com/NgoOB7g.png"); }
-  #mainnavigation button:nth-child(4) { background-image: url("https://i.imgur.com/AdIAnVp.png"); }
-  #mainnavigation button:nth-child(5) { background-image: url("https://i.imgur.com/2JRNtMK.png"); }
-  #mainnavigation button:nth-child(6) { background-image: url("https://i.imgur.com/FGT7mNs.png"); }
-  
   #sidechar {
+    width: 184px;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    z-index: 1;
   }
   
   #sidechar img {
-    height: 290px;
+    height: 180px;
   }
   
-  /* Header with 2 banner images */
-  #header {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    border-left: 1px solid black;
-    margin-top: 10px;
-  }
-  
-  #header img {
-    width: 600px;
-    height: auto;
-    border: 1px solid black;
-    display: block;
-  }
-  
-  /* Site Navigation */
   #sitenavigation1 {
     display: flex;
     width: 100%;
-    margin-top: 10px;
   }
   
-  #leftlay,
-  #rightlay {
-    background: #4285f4;
+  #leftlay, #rightlay {
+    background: #3a484b;
     color: white;
     padding: 10px;
     width: 300px;
     border: 1px solid black;
     font-size: 14px;
-    box-sizing: border-box;
   }
   
   #rightlay {
     margin-left: 10px;
   }
   
-  /* Ladder visuals */
   .levelBackground {
     width: 49px;
     height: 14px;
@@ -124,20 +84,16 @@ body {
     color: black;
   }
   
-  input,
-  select,
-  textarea {
+  input, select, textarea {
     border: 1px solid black;
   }
   
-  .login-section input[type="text"],
-  .login-section input[type="password"] {
+  .login-section input[type="text"], .login-section input[type="password"] {
     width: 90%;
     margin-bottom: 5px;
   }
   
-  .login-section input[type="submit"],
-  .login-section input[type="button"] {
+  .login-section input[type="submit"], .login-section input[type="button"] {
     margin: 5px 5px 5px 0;
     border: 1px solid black;
     cursor: pointer;
@@ -156,37 +112,5 @@ body {
   
   .ladder li {
     margin-bottom: 8px;
-  }
-  
-  /* Container1 below header */
-  #container1 {
-    width: 600px;
-    margin-left: 20px;
-    margin-top: 10px;
-  }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    #logo {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    #sitenavigation1 {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    #leftlay,
-    #rightlay {
-      width: 90%;
-      margin-bottom: 10px;
-    }
-  
-    #header img,
-    #container1 {
-      width: 100%;
-      max-width: 100%;
-    }
   }
   

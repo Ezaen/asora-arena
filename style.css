@@ -2,6 +2,8 @@ body {
     margin: 0;
     background: #b03134;
     font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
   }
   
   #layout.sitebg2 {
@@ -9,6 +11,7 @@ body {
     height: 6460px;
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
   
   #top {
@@ -16,7 +19,6 @@ body {
     flex-direction: row;
   }
   
-  /* doubled */
   #logo {
     width: 768px;
     height: 434px;
@@ -27,7 +29,6 @@ body {
     position: relative;
   }
   
-  /* doubled */
   #mainnavigation {
     width: 374px;
     height: 408px;
@@ -38,7 +39,6 @@ body {
     z-index: 1;
   }
   
-  /* doubled */
   .nav-button {
     width: 254px;
     height: 54px;
@@ -49,16 +49,15 @@ body {
     cursor: pointer;
   }
   
-  /* doubled */
   #header {
     width: 790.92px;
     height: 433.46px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    margin-left: 0;
   }
   
-  /* doubled */
   #headerimg, #randomheader {
     width: 788px;
     border: 2px solid black;
@@ -74,7 +73,6 @@ body {
     background: url("https://i.imgur.com/EyTFK1r.png") no-repeat center/cover;
   }
   
-  /* doubled */
   #sitenavigation1 {
     width: 768px;
     height: 2851.28px;
@@ -83,7 +81,6 @@ body {
     margin-top: 0;
   }
   
-  /* doubled */
   #leftlay, #rightlay {
     background: #3a484b;
     color: white;
@@ -103,9 +100,18 @@ body {
     margin-left: 20px;
   }
   
-  /* doubled */
   #container1 {
     width: 791.46px;
     height: 6024.18px;
+    margin-top: 20px;
+  }
+  
+  /* Increase login form size */
+  input[type="text"],
+  input[type="password"],
+  input[type="submit"],
+  input[type="button"],
+  label {
+    font-size: 28px;
   }
   

@@ -25,7 +25,6 @@ body {
     height: 434px;
     background-image: url('https://imgur.com/pob9GE3.png');
     background-repeat: no-repeat;
-    background-size: contain;
     background-position: top right;
     position: relative;
   }

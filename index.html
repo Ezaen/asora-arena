@@ -1,97 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=1560, initial-scale=1.0" />
   <title>Naruto Arena Clone</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
   <div id="layout" class="sitebg2">
-    <div class="top-section">
+    <div id="top">
       <div id="logo">
         <div id="mainnavigation">
-          <button class="navbtn" style="background-image: url('https://i.imgur.com/d7KfuGs.png');"></button>
-          <button class="navbtn" style="background-image: url('https://i.imgur.com/oy5HWqH.png');"></button>
-          <button class="navbtn" style="background-image: url('https://i.imgur.com/NgoOB7g.png');"></button>
-          <button class="navbtn" style="background-image: url('https://i.imgur.com/AdIAnVp.png');"></button>
-          <button class="navbtn" style="background-image: url('https://i.imgur.com/2JRNtMK.png');"></button>
-          <button class="navbtn" style="background-image: url('https://i.imgur.com/FGT7mNs.png');"></button>
+          <img src="https://i.imgur.com/d7KfuGs.png" class="nav-button" alt="button">
+          <img src="https://i.imgur.com/oy5HWqH.png" class="nav-button" alt="button">
+          <img src="https://i.imgur.com/NgoOB7g.png" class="nav-button" alt="button">
+          <img src="https://i.imgur.com/AdIAnVp.png" class="nav-button" alt="button">
+          <img src="https://i.imgur.com/2JRNtMK.png" class="nav-button" alt="button">
+          <img src="https://i.imgur.com/FGT7mNs.png" class="nav-button" alt="button">
         </div>
       </div>
+
       <div id="header">
-        <div id="headerimg">
-          <img src="https://i.imgur.com/Bx7v07p.png" alt="Header 1" />
-        </div>
-        <div id="randomheader">
-          <img src="https://i.imgur.com/EyTFK1r.png" alt="Header 2" />
-        </div>
+        <div id="headerimg"></div>
+        <div id="randomheader"></div>
       </div>
     </div>
 
-    <div class="bottom-section">
-      <div id="sitenavigation1">
-        <div id="leftlay">
-          <div class="login-section">
-            <h4 class="block">Account</h4>
-            <input type="text" value="runcanandrei@gmail.com" />
-            <br />
-            <input type="password" value="********" />
-            <br />
-            <input type="checkbox" id="stayLogged" /> Stay logged in
-            <br />
-            <input type="submit" value="Login" />
-            <input type="button" value="Register" />
-            <br />
-            <a href="#">Lost your password?</a>
-          </div>
-          <h4 class="block">Latest news</h4>
-          <ul>
-            <li>Balance update coming soon</li>
-            <li>New characters released</li>
-            <li>Clan event next week</li>
-          </ul>
-          <h4 class="block">Statistics</h4>
-          <p>Members: 1,000,000</p>
-          <p>Online: 250</p>
-        </div>
-        <div id="rightlay">
-          <h4 class="block">Random Screenshot</h4>
-          <img src="https://i.imgur.com/sBdbNkf.png" width="200" alt="Screenshot" />
-          <h4 class="block">First time playing?</h4>
-          <p><b>Note:</b> If this is your first time playing, be sure to check out <b>The Basics</b> before you start battling.</p>
-          <h4 class="block">Top 10 Ladder</h4>
-          <ul class="ladder">
-            <li>1. Al-Saher <div class="levelBackground"><div class="levelFill" style="width: 49px;"></div><div class="levelNumber">68</div></div></li>
-            <li>2. Poderoso-Castiga <div class="levelBackground"><div class="levelFill" style="width: 44px;"></div><div class="levelNumber">64</div></div></li>
-            <li>3. AyraStark <div class="levelBackground"><div class="levelFill" style="width: 40px;"></div><div class="levelNumber">52</div></div></li>
-          </ul>
-          <h4 class="block">Top 10 Clan Ladder</h4>
-          <ul class="ladder">
-            <li>1. Game Of Thrones <div class="levelBackground"><div class="levelFill" style="width: 48px;"></div><div class="levelNumber">90</div></div></li>
-            <li>2. Age of Pirates <div class="levelBackground"><div class="levelFill" style="width: 43px;"></div><div class="levelNumber">89</div></div></li>
-            <li>3. DEADPOOL <div class="levelBackground"><div class="levelFill" style="width: 41px;"></div><div class="levelNumber">84</div></div></li>
-          </ul>
-          <h4 class="block">Top 10 Most Wins</h4>
-          <ul>
-            <li>1. saintseiya – 19205 wins</li>
-            <li>2. denishendaye – 18243 wins</li>
-            <li>3. calefa – 13804 wins</li>
-          </ul>
-          <h4 class="block">Top 10 Winstreak</h4>
-          <ul>
-            <li>1. budai111 – 90 streak</li>
-            <li>2. KingSeidouh – 88 streak</li>
-            <li>3. AL-Saher – 85 streak</li>
-          </ul>
-        </div>
+    <div id="sitenavigation1">
+      <div id="leftlay">
+        <h4 class="block">Account</h4>
+        <input type="text" placeholder="username" maxlength="16" name="username"><br>
+        <input type="password" placeholder="password" name="password"><br>
+        <label><input type="checkbox" checked name="cookie"> Stay logged in</label><br>
+        <input type="submit" value="Login" class="button">
+        <input type="button" class="button" value="Register">
+        <br>
+        <a href="#"><u>Lost your password?</u></a>
+
+        <h4 class="block">Latest news</h4>
+        <ul class="newst">
+          <li><a href="#">Holiday Havoc Registration 2016</a></li>
+          <li><a href="#">Balance 1.3.0 + New Characters</a></li>
+          <li><a href="#">Balance 1.2.9</a></li>
+        </ul>
+
+        <h4 class="block">Poll</h4>
+        <p><b>Do you approve of the new ladder EXP setup?</b></p>
+        <form>
+          <label><input type="radio" name="poll"> Not Enough</label><br>
+          <label><input type="radio" name="poll"> Just Right</label><br>
+          <label><input type="radio" name="poll"> Too Much</label><br>
+        </form>
+        <b>Please login to vote.</b>
+
+        <h4 class="block">Statistics</h4>
+        <p>Total members: <span>4,133,031</span></p>
+        <p>Online: <span>214</span></p>
+
+        <h4 class="block">Partners</h4>
+        <a href="#">Soul-Arena.com</a><br>
+        <a href="#">Soul-Boards.com</a><br>
+        <a href="#">Naruto-Boards.com</a>
       </div>
-      <div id="container1">
-        <h1>Naruto Arena</h1>
-        <p>Your #1 Naruto Online Multiplayer Game</p>
+
+      <div id="rightlay">
+        <h4 class="block">Random Screenshot</h4>
+        <img src="https://i.imgur.com/CBJsD1A.png" width="170" />
+
+        <h4 class="block">Top 10 Ladder</h4>
+        <ul>
+          <li>1. Al-Saher - Level 68</li>
+          <li>2. Poderoso-Castiga - Level 64</li>
+          <li>3. Arya*Stark - Level 52</li>
+        </ul>
+
+        <h4 class="block">Top 10 Clan Ladder</h4>
+        <ul>
+          <li>1. Game Of Thrones - Level 90</li>
+          <li>2. Age_of_Pirates - Level 89</li>
+          <li>3. -DEADPOOL - Level 84</li>
+        </ul>
+
+        <h4 class="block">Top 10 Most Wins</h4>
+        <ul>
+          <li>1. saintseiya – 19205 wins</li>
+          <li>2. denishendaye – 18243 wins</li>
+          <li>3. calafa – 13804 wins</li>
+        </ul>
+
+        <h4 class="block">Top 10 Winstreak</h4>
+        <ul>
+          <li>1. budaj111 – 90 streak</li>
+          <li>2. KingSeidoN – 88 streak</li>
+          <li>3. Al-Saher – 85 streak</li>
+        </ul>
       </div>
+    </div>
+
+    <div id="container1">
+      <h1>Naruto Arena</h1>
+      <h2>Your #1 Naruto Online Multiplayer Game</h2>
+
+      <div class="newsheader">Holiday Havoc Registration 2016</div>
+      <div class="news">Tournament registration is open. Join now and compete!</div>
+
+      <div class="newsheader">Balance 1.3.0 + New Characters</div>
+      <div class="news">New characters and balance updates added to the game.</div>
+
+      <div class="newsheader">Balance 1.2.9</div>
+      <div class="news">More nerfs and buffs applied to adjust gameplay experience.</div>
+
+      <div class="newsheader">Heads Up</div>
+      <div class="news">Mecha Naruto removed. Avoid glitches during this update.</div>
+
+      <div class="newsheader">Balance 1.2.8 + Event</div>
+      <div class="news">Event characters added. Check out Shikaku and Shisui.</div>
     </div>
   </div>
 </body>

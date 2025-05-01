@@ -5,7 +5,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Naruto Arena Clone</title>
-  <link rel="stylesheet" href="styles.css" />
   <style>
     body {
       margin: 0;
@@ -22,59 +21,72 @@
     #logo {
       display: flex;
       width: 100%;
-      height: 217px;
+      height: auto;
       background: #fc0;
+      position: relative;
     }
 
     #mainnavigation {
       display: flex;
       flex-direction: column;
-      padding: 10px;
+      padding: 20px 10px;
+      gap: 12px;
     }
 
     #mainnavigation button {
       width: 220px;
-      height: 36px;
+      height: 42px;
       font-weight: bold;
-      margin-bottom: 10px;
-      cursor: pointer;
-      background-repeat: no-repeat;
+      font-size: 14px;
       background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: transparent;
       border: none;
+      cursor: pointer;
+      color: black;
     }
 
     #mainnavigation button:nth-child(1) {
-      background-image: url('https://i.imgur.com/d7KfuGs.png');
+      background-image: url("https://i.imgur.com/d7KfuGs.png");
     }
+
     #mainnavigation button:nth-child(2) {
-      background-image: url('https://i.imgur.com/oy5HWqH.png');
+      background-image: url("https://i.imgur.com/oy5HWqH.png");
     }
+
     #mainnavigation button:nth-child(3) {
-      background-image: url('https://i.imgur.com/NgoOB7g.png');
+      background-image: url("https://i.imgur.com/NgoOB7g.png");
     }
+
     #mainnavigation button:nth-child(4) {
-      background-image: url('https://i.imgur.com/AdIAnVp.png');
+      background-image: url("https://i.imgur.com/AdIAnVp.png");
     }
+
     #mainnavigation button:nth-child(5) {
-      background-image: url('https://i.imgur.com/2JRNtMK.png');
+      background-image: url("https://i.imgur.com/2JRNtMK.png");
     }
+
     #mainnavigation button:nth-child(6) {
-      background-image: url('https://i.imgur.com/FGT7mNs.png');
+      background-image: url("https://i.imgur.com/FGT7mNs.png");
     }
 
     #sidechar {
       display: flex;
       align-items: flex-start;
-      margin-top: -20px;
+      justify-content: center;
+      margin-left: -30px;
+      padding-top: 20px;
     }
 
     #sidechar img {
-      height: 270px;
+      height: 310px;
     }
 
     #sitenavigation1 {
       display: flex;
       width: 100%;
+      padding: 20px;
     }
 
     #leftlay, #rightlay {

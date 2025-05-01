@@ -1,5 +1,3 @@
-/* style.css */
-
 body {
     margin: 0;
     background: #b03134;
@@ -7,148 +5,107 @@ body {
   }
   
   #layout.sitebg2 {
-    width: 780px;
-    height: 3230px;
+    width: 1560px;
+    height: 6460px;
     display: flex;
     flex-direction: column;
   }
   
+  #top {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  /* doubled */
   #logo {
-    width: 384px;
-    height: 217px;
+    width: 768px;
+    height: 434px;
     background: url("https://i.imgur.com/sBdbNkf.png") no-repeat right;
+    background-size: 500px 660px;
     display: flex;
     flex-direction: row;
     position: relative;
   }
   
+  /* doubled */
   #mainnavigation {
-    width: 187px;
-    height: 204px;
+    width: 374px;
+    height: 408px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding: 6px;
+    padding: 12px;
     z-index: 1;
   }
   
-  #mainnavigation button {
-    width: 127px;
-    height: 27px;
-    margin-bottom: 7px;
+  /* doubled */
+  .nav-button {
+    width: 254px;
+    height: 54px;
+    margin-bottom: 14px;
     background-size: cover;
     background-repeat: no-repeat;
     border: none;
     cursor: pointer;
   }
   
+  /* doubled */
   #header {
-    width: 395.46px;
-    height: 216.73px;
+    width: 790.92px;
+    height: 433.46px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
   }
   
+  /* doubled */
   #headerimg, #randomheader {
-    width: 394px;
-    border: 1px solid black;
+    width: 788px;
+    border: 2px solid black;
   }
   
   #headerimg {
-    height: 73px;
+    height: 146px;
     background: url("https://i.imgur.com/Bx7v07p.png") no-repeat center/cover;
   }
   
   #randomheader {
-    height: 143.73px;
+    height: 287.46px;
     background: url("https://i.imgur.com/EyTFK1r.png") no-repeat center/cover;
   }
   
+  /* doubled */
   #sitenavigation1 {
-    width: 384px;
-    height: 1425.64px;
+    width: 768px;
+    height: 2851.28px;
     display: flex;
     flex-direction: row;
     margin-top: 0;
   }
   
+  /* doubled */
   #leftlay, #rightlay {
     background: #3a484b;
     color: white;
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid black;
+    padding: 20px;
+    font-size: 28px;
+    border: 2px solid black;
   }
   
   #leftlay {
-    width: 181.46px;
-    height: 945.46px;
+    width: 362.92px;
+    height: 1890.92px;
   }
   
   #rightlay {
-    width: 181.46px;
-    height: 1425.64px;
-    margin-left: 10px;
+    width: 362.92px;
+    height: 2851.28px;
+    margin-left: 20px;
   }
   
+  /* doubled */
   #container1 {
-    width: 395.73px;
-    height: 3012.09px;
-  }
-  
-  h4.block {
-    margin-top: 1em;
-    margin-bottom: 0.5em;
-    font-weight: bold;
-  }
-  
-  ul.ladder {
-    list-style: none;
-    padding-left: 0;
-  }
-  
-  ul.ladder li {
-    margin-bottom: 8px;
-  }
-  
-  .levelBackground {
-    width: 49px;
-    height: 14px;
-    background-color: #ccc;
-    position: relative;
-    border: 1px solid black;
-    margin-bottom: 5px;
-  }
-  
-  .levelFill {
-    height: 100%;
-    background-color: gold;
-  }
-  
-  .levelNumber {
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-size: 10px;
-    padding: 0 2px;
-    color: black;
-  }
-  
-  input, select, textarea {
-    border: 1px solid black;
-  }
-  
-  .login-section input[type="text"],
-  .login-section input[type="password"] {
-    width: 90%;
-    margin-bottom: 5px;
-  }
-  
-  .login-section input[type="submit"],
-  .login-section input[type="button"] {
-    margin: 5px 5px 5px 0;
-    border: 1px solid black;
-    cursor: pointer;
+    width: 791.46px;
+    height: 6024.18px;
   }
   

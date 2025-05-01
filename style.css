@@ -23,9 +23,9 @@ body {
   #logo {
     width: 768px;
     height: 434px;
-    background-image: url('https://imgur.com/pob9GE3.png');
+    background-image: url('https://imgur.com/HxuLJFl.png');
     background-repeat: no-repeat;
-    background-size: 300px 396px;
+    background-size: contain;
     background-position: top right;
     position: relative;
   }

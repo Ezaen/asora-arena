@@ -1,0 +1,154 @@
+/* style.css */
+
+body {
+    margin: 0;
+    background: #fc0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #top-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+  }
+  
+  #top-banner img {
+    max-height: 100px;
+    width: auto;
+  }
+  
+  #logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    padding: 0 20px;
+  }
+  
+  #mainnavigation {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 2;
+  }
+  
+  #mainnavigation img {
+    width: 180px;
+    height: auto;
+    display: block;
+    border: none;
+  }
+  
+  #sidechar {
+    position: relative;
+    z-index: 1;
+    margin-left: -30px;
+  }
+  
+  #sidechar img {
+    height: 320px;
+    width: auto;
+  }
+  
+  #sitenavigation1 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+  
+  #leftlay, #rightlay {
+    background: #4285f4;
+    color: white;
+    padding: 15px;
+    width: 300px;
+    border: 1px solid black;
+    font-size: 14px;
+  }
+  
+  .levelBackground {
+    width: 49px;
+    height: 14px;
+    background-color: #ccc;
+    position: relative;
+    border: 1px solid black;
+    margin-bottom: 5px;
+  }
+  
+  .levelFill {
+    height: 100%;
+    background-color: gold;
+  }
+  
+  .levelNumber {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 10px;
+    padding: 0 2px;
+    color: black;
+  }
+  
+  input, select, textarea {
+    border: 1px solid black;
+  }
+  
+  .login-section input[type="text"],
+  .login-section input[type="password"] {
+    width: 90%;
+    margin-bottom: 5px;
+  }
+  
+  .login-section input[type="submit"],
+  .login-section input[type="button"] {
+    margin: 5px 5px 5px 0;
+    border: 1px solid black;
+    cursor: pointer;
+  }
+  
+  h4.block {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+  }
+  
+  .ladder {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .ladder li {
+    margin-bottom: 8px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    #logo {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    #sidechar {
+      margin-left: 0;
+    }
+  
+    #sitenavigation1 {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    #leftlay, #rightlay {
+      width: 90%;
+    }
+  }
+  

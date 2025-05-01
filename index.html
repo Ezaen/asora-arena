@@ -1,63 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Naruto Arena Clone</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <div class="top-section">
+  <div class="layout">
     <div id="logo">
       <div id="mainnavigation">
-        <img src="https://i.imgur.com/d7KfuGs.png" alt="Start Page" class="nav-btn" />
-        <img src="https://i.imgur.com/oy5HWqH.png" alt="Start Playing" class="nav-btn" />
-        <img src="https://i.imgur.com/NgoOB7g.png" alt="Game Manual" class="nav-btn" />
-        <img src="https://i.imgur.com/AdIAnVp.png" alt="Ladders" class="nav-btn" />
-        <img src="https://i.imgur.com/2JRNtMK.png" alt="Ninja Missions" class="nav-btn" />
-        <img src="https://i.imgur.com/FGT7mNs.png" alt="Enter Chat Room" class="nav-btn" />
+        <img src="https://i.imgur.com/d7KfuGs.png" alt="Startpage">
+        <img src="https://i.imgur.com/oy5HWqH.png" alt="Start Playing">
+        <img src="https://i.imgur.com/NgoOB7g.png" alt="Game Manual">
+        <img src="https://i.imgur.com/AdIAnVp.png" alt="Ladders">
+        <img src="https://i.imgur.com/2JRNtMK.png" alt="Ninja Missions">
+        <img src="https://i.imgur.com/FGT7mNs.png" alt="Enter Chat Room">
       </div>
       <div id="sidechar">
-        <img src="https://i.imgur.com/CBJsD1A.png" alt="Side Character" class="side-char" />
+        <img src="https://i.imgur.com/CBJsD1A.png" alt="Side Character" />
       </div>
     </div>
 
     <div id="header">
-      <img src="https://i.imgur.com/Bx7v07p.png" alt="Top Logo" class="top-banner" />
-      <img src="https://i.imgur.com/EyTFK1r.png" alt="Top Scene" class="top-banner" />
+      <img src="https://i.imgur.com/Bx7v07p.png" class="topbanner" alt="Top Logo">
+      <img src="https://i.imgur.com/EyTFK1r.png" class="topbanner" alt="Top Image">
     </div>
-  </div>
 
-  <div id="maincontent">
     <div id="sitenavigation1">
       <div id="leftlay">
         <h4 class="block">Account</h4>
-        <input type="text" placeholder="Username" />
-        <input type="password" placeholder="Password" />
-        <label><input type="checkbox" /> Stay logged in</label>
-        <div>
-          <input type="submit" value="Login" />
-          <input type="button" value="Register" />
-        </div>
+        <input type="text" value="runcanandrei@gmail.com" /><br />
+        <input type="password" value="********" /><br />
+        <input type="checkbox" id="stayLogged" /> Stay logged in<br />
+        <input type="submit" value="Login" />
+        <input type="button" value="Register" /><br />
         <a href="#">Lost your password?</a>
-      </div>
-      <div id="rightlay">
-        <h4 class="block">Latest News</h4>
+
+        <h4 class="block">Latest news</h4>
         <ul>
           <li>Balance update coming soon</li>
           <li>New characters released</li>
           <li>Clan event next week</li>
         </ul>
+
+        <h4 class="block">Statistics</h4>
+        <p>Members: 1,000,000</p>
+        <p>Online: 250</p>
+      </div>
+
+      <div id="rightlay">
+        <h4 class="block">Random Screenshot</h4>
+        <img src="https://i.imgur.com/MHKP7Xr.png" width="200" alt="Screenshot"/>
+
+        <h4 class="block">First time playing?</h4>
+        <p><b>Note:</b> Check <b>The Basics</b> before you start battling.</p>
+
+        <h4 class="block">Top 10 Ladder</h4>
+        <ul class="ladder">
+          <li>1. Al-Saher <div class="levelBackground"><div class="levelFill" style="width: 49px;"></div><div class="levelNumber">68</div></div></li>
+          <li>2. Poderoso-Castiga <div class="levelBackground"><div class="levelFill" style="width: 44px;"></div><div class="levelNumber">64</div></div></li>
+          <li>3. AyraStark <div class="levelBackground"><div class="levelFill" style="width: 40px;"></div><div class="levelNumber">52</div></div></li>
+        </ul>
+
+        <h4 class="block">Top 10 Clan Ladder</h4>
+        <ul class="ladder">
+          <li>1. Game Of Thrones <div class="levelBackground"><div class="levelFill" style="width: 48px;"></div><div class="levelNumber">90</div></div></li>
+          <li>2. Age of Pirates <div class="levelBackground"><div class="levelFill" style="width: 43px;"></div><div class="levelNumber">89</div></div></li>
+          <li>3. DEADPOOL <div class="levelBackground"><div class="levelFill" style="width: 41px;"></div><div class="levelNumber">84</div></div></li>
+        </ul>
+
+        <h4 class="block">Top 10 Most Wins</h4>
+        <ul>
+          <li>1. saintseiya – 19205 wins</li>
+          <li>2. denishendaye – 18243 wins</li>
+          <li>3. calefa – 13804 wins</li>
+        </ul>
+
+        <h4 class="block">Top 10 Winstreak</h4>
+        <ul>
+          <li>1. budai111 – 90 streak</li>
+          <li>2. KingSeidouh – 88 streak</li>
+          <li>3. AL-Saher – 85 streak</li>
+        </ul>
       </div>
     </div>
 
     <div id="container1">
-      <h1>Naruto Arena</h1>
-      <p>Welcome to your favorite online ninja multiplayer game!</p>
+      <!-- Future content -->
     </div>
   </div>
 </body>
-
 </html>

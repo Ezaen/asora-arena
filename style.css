@@ -1,124 +1,192 @@
+/* General Styles */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
     background-color: #fc0;
+    font-family: Arial, sans-serif;
   }
   
-  .top-section {
+  .layout {
     display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
+  /* Logo section: left side nav buttons and character */
   #logo {
     display: flex;
-    padding: 20px;
-    background-color: #fc0;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
   }
   
   #mainnavigation {
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    padding-right: 10px;
+    justify-content: center;
+    margin-right: 20px;
+    z-index: 2;
   }
   
-  .nav-btn {
-    width: 200px;
-    height: auto;
-    display: block;
+  #mainnavigation button {
+    background: transparent;
+    border: none;
+    margin-bottom: 10px;
+    width: 220px;
+    height: 45px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 0;
+    cursor: pointer;
   }
+  
+  #mainnavigation button:nth-child(1) { background-image: url("https://i.imgur.com/d7KfuGs.png"); }
+  #mainnavigation button:nth-child(2) { background-image: url("https://i.imgur.com/oy5HWqH.png"); }
+  #mainnavigation button:nth-child(3) { background-image: url("https://i.imgur.com/NgoOB7g.png"); }
+  #mainnavigation button:nth-child(4) { background-image: url("https://i.imgur.com/AdIAnVp.png"); }
+  #mainnavigation button:nth-child(5) { background-image: url("https://i.imgur.com/2JRNtMK.png"); }
+  #mainnavigation button:nth-child(6) { background-image: url("https://i.imgur.com/FGT7mNs.png"); }
   
   #sidechar {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    z-index: 1;
   }
   
-  .side-char {
-    height: 360px;
+  #sidechar img {
+    height: 290px;
   }
   
+  /* Header with 2 banner images */
   #header {
     display: flex;
     flex-direction: column;
-    justify-content: start;
-    padding: 20px 10px;
+    justify-content: flex-start;
+    border-left: 1px solid black;
+    margin-top: 10px;
   }
   
-  .top-banner {
-    width: 250px;
+  #header img {
+    width: 600px;
     height: auto;
     border: 1px solid black;
-    margin-bottom: 5px;
+    display: block;
   }
   
-  #maincontent {
-    display: flex;
-  }
-  
+  /* Site Navigation */
   #sitenavigation1 {
     display: flex;
-    margin: 20px;
+    width: 100%;
+    margin-top: 10px;
   }
   
-  #leftlay, #rightlay {
-    background-color: #4285f4;
+  #leftlay,
+  #rightlay {
+    background: #4285f4;
     color: white;
     padding: 10px;
     width: 300px;
     border: 1px solid black;
+    font-size: 14px;
+    box-sizing: border-box;
   }
   
   #rightlay {
     margin-left: 10px;
   }
   
-  .block {
-    font-weight: bold;
-    margin-top: 1em;
+  /* Ladder visuals */
+  .levelBackground {
+    width: 49px;
+    height: 14px;
+    background-color: #ccc;
+    position: relative;
+    border: 1px solid black;
+    margin-bottom: 5px;
   }
   
-  input[type="text"], input[type="password"] {
-    width: 100%;
-    margin-bottom: 5px;
-    padding: 5px;
+  .levelFill {
+    height: 100%;
+    background-color: gold;
+  }
+  
+  .levelNumber {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 10px;
+    padding: 0 2px;
+    color: black;
+  }
+  
+  input,
+  select,
+  textarea {
     border: 1px solid black;
   }
   
-  input[type="submit"], input[type="button"] {
-    padding: 5px 10px;
+  .login-section input[type="text"],
+  .login-section input[type="password"] {
+    width: 90%;
+    margin-bottom: 5px;
+  }
+  
+  .login-section input[type="submit"],
+  .login-section input[type="button"] {
     margin: 5px 5px 5px 0;
     border: 1px solid black;
-    background-color: #eee;
     cursor: pointer;
   }
   
-  #container1 {
-    margin-top: 20px;
-    padding: 10px;
-    flex: 1;
+  h4.block {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    font-weight: bold;
   }
   
+  .ladder {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .ladder li {
+    margin-bottom: 8px;
+  }
+  
+  /* Container1 below header */
+  #container1 {
+    width: 600px;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+  
+  /* Responsive */
   @media (max-width: 768px) {
-    .top-section, #maincontent, #sitenavigation1 {
+    #logo {
       flex-direction: column;
       align-items: center;
     }
   
-    #logo, #header, #sitenavigation1, #container1 {
+    #sitenavigation1 {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    #leftlay,
+    #rightlay {
+      width: 90%;
+      margin-bottom: 10px;
+    }
+  
+    #header img,
+    #container1 {
       width: 100%;
-    }
-  
-    .top-banner {
-      width: 90%;
-    }
-  
-    .nav-btn {
-      width: 90%;
-    }
-  
-    .side-char {
-      height: auto;
-      width: 90%;
+      max-width: 100%;
     }
   }
   

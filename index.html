@@ -16,55 +16,51 @@
     .layout {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
     }
 
     #logo {
-      position: relative;
-      width: 100%;
-      height: 250px;
-      background: #fc0;
       display: flex;
-      justify-content: flex-start;
-      padding-left: 30px;
+      width: 100%;
+      height: 230px;
+      background: #fc0;
+      position: relative;
     }
 
     #mainnavigation {
       display: flex;
       flex-direction: column;
-      padding-top: 10px;
+      padding: 20px 0 20px 30px;
       z-index: 2;
     }
 
     #mainnavigation button {
-      width: 220px;
-      height: 35px;
-      margin-bottom: 8px;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      border: none;
+      width: 200px;
+      height: 40px;
+      margin-bottom: 10px;
       font-weight: bold;
-      font-size: 12px;
+      border: none;
+      background: none;
+      padding: 0;
       cursor: pointer;
     }
 
-    #mainnavigation button:nth-child(1) { background-image: url('https://i.imgur.com/d7KfuGs.png'); }
-    #mainnavigation button:nth-child(2) { background-image: url('https://i.imgur.com/oy5HWqH.png'); }
-    #mainnavigation button:nth-child(3) { background-image: url('https://i.imgur.com/NgoOB7g.png'); }
-    #mainnavigation button:nth-child(4) { background-image: url('https://i.imgur.com/AdIAnVp.png'); }
-    #mainnavigation button:nth-child(5) { background-image: url('https://i.imgur.com/2JRNtMK.png'); }
-    #mainnavigation button:nth-child(6) { background-image: url('https://i.imgur.com/FGT7mNs.png'); }
+    #mainnavigation button img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
 
     #sidechar {
       position: absolute;
-      right: 0;
+      right: unset;
+      left: 250px;
       bottom: 0;
       z-index: 1;
     }
 
     #sidechar img {
-      height: 270px;
+      height: 220px;
     }
 
     #sitenavigation1 {
@@ -144,12 +140,12 @@
   <div class="layout">
     <div id="logo">
       <div id="mainnavigation">
-        <button></button>
-        <button></button>
-        <button></button>
-        <button></button>
-        <button></button>
-        <button></button>
+        <button><img src="https://i.imgur.com/d7KfuGs.png" alt="Startpage" /></button>
+        <button><img src="https://i.imgur.com/oy5HWqH.png" alt="Start Playing" /></button>
+        <button><img src="https://i.imgur.com/NgoOB7g.png" alt="Game Manual" /></button>
+        <button><img src="https://i.imgur.com/AdIAnVp.png" alt="Ladders" /></button>
+        <button><img src="https://i.imgur.com/2JRNtMK.png" alt="Ninja Missions" /></button>
+        <button><img src="https://i.imgur.com/FGT7mNs.png" alt="Enter Chat Room" /></button>
       </div>
       <div id="sidechar">
         <img src="https://i.imgur.com/CBJsD1A.png" alt="Side Character" />

@@ -24,13 +24,17 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    margin: 0;
+    padding: 0;
+    height: auto;
   }
   
   #logo {
     width: 768px;
     height: 434px;
-    background-image: url('https://imgur.com/KlSxySr.png');
+    background-image: url('https://imgur.com/UlwIQP0.png');
     background-repeat: no-repeat;
+    background-size: cover;
     background-position: top left;
     position: relative;
     display: flex;
@@ -61,12 +65,11 @@
   #header {
     width: 790.92px;
     height: 434px;
-    margin-left: 2px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     margin: 0;
     padding: 0;
+    display: block;
+    flex-direction: column;
+    justify-content: space-between;
   }
   
   #headerimg, #randomheader {
@@ -89,10 +92,11 @@
   /* === CONTENT WRAPPER === */
   #content-wrapper {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 0;
     align-items: flex-start;
     margin-top: 0;
+    padding-top: 0;
   }
   
   /* === LEFT & RIGHT LAYOUTS === */

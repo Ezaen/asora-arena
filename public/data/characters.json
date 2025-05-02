@@ -1,0 +1,49 @@
+[
+    {
+      "id": "naruto_s",
+      "name": "Naruto (S)",
+      "hp": 100,
+      "skills": [
+        {
+          "id": "rasengan",
+          "name": "Rasengan",
+          "cost": { "ninjutsu": 1 },
+          "cooldown": 1,
+          "damage": 30,
+          "description": "Deals 30 damage to one enemy."
+        },
+        {
+          "id": "shadow_clones",
+          "name": "Shadow Clones",
+          "cost": { "ninjutsu": 1 },
+          "cooldown": 2,
+          "damage": 0,
+          "description": "Reduces next damage taken by 15."
+        }
+      ]
+    },
+    {
+      "id": "sasuke_s",
+      "name": "Sasuke (S)",
+      "hp": 100,
+      "skills": [
+        {
+          "id": "chidori",
+          "name": "Chidori",
+          "cost": { "ninjutsu": 1, "taijutsu": 1 },
+          "cooldown": 2,
+          "damage": 40,
+          "description": "Deals 40 damage to one enemy."
+        },
+        {
+          "id": "fireball",
+          "name": "Fireball Jutsu",
+          "cost": { "ninjutsu": 2 },
+          "cooldown": 1,
+          "damage": 25,
+          "description": "Deals 25 damage to all enemies."
+        }
+      ]
+    }
+  ]
+  

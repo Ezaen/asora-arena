@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1560, initial-scale=1.0" />
+  <title>Asora Arena - Battle</title>
+  <link rel="stylesheet" href="css/game.css" />
+</head>
+<body>
+  <div id="game">
+    <header>
+      <h1>Asora Arena</h1>
+      <h2>Turn-Based Battle</h2>
+    </header>
+
+    <div id="board">
+      <div id="enemy-team" class="team">
+        <h3>Enemy Team</h3>
+        <div class="characters" id="enemy-characters"></div>
+      </div>
+
+      <div id="player-team" class="team">
+        <h3>Your Team</h3>
+        <div class="characters" id="player-characters"></div>
+        <div id="chakra-bar"></div>
+        <div id="skill-panel"></div>
+        <button id="end-turn">End Turn</button>
+      </div>
+    </div>
+
+    <div id="game-log"></div>
+  </div>
+
+  <script src="js/game-ui.js"></script>
+</body>
+</html>

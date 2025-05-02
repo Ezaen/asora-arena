@@ -34,7 +34,7 @@
     height: 434px;
     background-image: url('https://imgur.com/UlwIQP0.png');
     background-repeat: no-repeat;
-    background-position: top left;
+    background-position: top right;
     position: relative;
     display: flex;
     flex-direction: column;

@@ -32,7 +32,7 @@
   #logo {
     width: 768px;
     height: 434px;
-    background-image: url('https://imgur.com/qS0GrGX.png');
+    background-image: url('/images/layout/logo.png');
     background-repeat: no-repeat;
     background-position: top right;
     position: relative;
@@ -81,12 +81,12 @@
   
   #headerimg {
     height: 146px;
-    background-image: url('https://i.imgur.com/Bx7v07p.png');
+    background-image: url('/images/layout/header-top.png');
   }
   
   #randomheader {
     height: 287.46px;
-    background-image: url('https://i.imgur.com/EyTFK1r.png');
+    background-image: url('/images/layout/header-banner.png');
   }
   
   /* === CONTENT WRAPPER === */

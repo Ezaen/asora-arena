@@ -25,21 +25,22 @@ body {
     height: 434px;
     background-image: url('https://imgur.com/KlSxySr.png');
     background-repeat: no-repeat;
-    background-size: cover; /* Fills full div */
+    background-size: cover;
     background-position: top left;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding: 24px; /* match previous #mainnavigation offset */
+    padding: 24px;
+    margin: 0;
   }
   
   #mainnavigation {
-  width: 374px;
-  display: flex;
-  flex-direction: column;
-  z-index: 10;
-}
+    width: 374px;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+  }
   
   .nav-button {
     width: 395px;
@@ -59,6 +60,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin: 0;
+    padding: 0;
   }
   
   #headerimg, #randomheader {
@@ -82,9 +85,9 @@ body {
   #content-wrapper {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 0;
     align-items: flex-start;
-    margin-top: 10px;
+    margin-top: 0;
   }
   
   /* === LEFT & RIGHT LAYOUTS === */
@@ -94,6 +97,8 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    margin: 0;
+    padding: 0;
   }
   
   #leftlay, #rightlay {
@@ -123,11 +128,14 @@ body {
     background: white;
     padding: 40px;
     box-sizing: border-box;
+    margin: 0;
   }
   
   /* === ELEMENT STYLES === */
   h1, h2, h4, p, ul, li, input, label, a, b {
     font-size: 28px;
+    margin: 0;
+    padding: 0;
   }
   
   input[type="text"], input[type="password"] {
@@ -169,4 +177,3 @@ body {
     font-size: 28px;
     margin-bottom: 20px;
   }
-  

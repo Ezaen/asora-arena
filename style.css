@@ -113,7 +113,6 @@
   #leftlay, #rightlay {
     background-color: #3a484b;
     color: white;
-    padding: 20px;
     border: 2px solid black;
     font-size: 28px;
     box-sizing: border-box;
@@ -122,10 +121,10 @@
   #leftlay {
     width: 362.92px;
     height: 1890.92px;
+    padding: 10px;
   }
 
   .nav {
-    padding: 10px;
     margin: 0;
   }
 
@@ -165,6 +164,7 @@
     width: 362.92px;
     height: 2851.28px;
     margin-left: 20px;
+    padding: 20px;
   }
 
   /* === CONTAINER1 === */

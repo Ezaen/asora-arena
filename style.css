@@ -138,17 +138,25 @@
   .nav a,
   .nav p {
     font-size: 20px;
-    color: #00ccff;
-    text-decoration: none;
+    display: block;
     margin: 3px 0;
   }
 
-  .nav p {
-    color: #ffffff;
+  .nav a {
+    color: #00ccff;
+    text-decoration: none;
   }
 
   .nav a:hover {
     text-decoration: underline;
+  }
+
+  .nav p b {
+    font-weight: bold;
+  }
+
+  .nav p {
+    color: #ffffff;
   }
 
   #rightlay {

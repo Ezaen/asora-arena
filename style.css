@@ -122,11 +122,11 @@
     width: 362.92px;
     height: 1890.92px;
     padding: 10px;
-    margin-left: 10px;
+    margin-left: 0;
   }
 
   .nav {
-    margin: 0;
+    margin: 0 0 0 10px;
   }
 
   .nav h4 {

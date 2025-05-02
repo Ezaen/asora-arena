@@ -81,12 +81,12 @@
   
   #headerimg {
     height: 146px;
-    background-image: url('/images/layout/header-top.png');
+    background-image: url('public/images/layout/header-top.png');
   }
   
   #randomheader {
     height: 287.46px;
-    background-image: url('/images/layout/header-banner.png');
+    background-image: url('public/images/layout/header-banner.png');
   }
   
   /* === CONTENT WRAPPER === */

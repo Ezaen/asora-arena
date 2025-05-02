@@ -133,7 +133,7 @@
   }
 
   .nav h4 {
-    font-size: 26px;
+    font-size: 30px;
     color: #fff;
     font-style: italic;
     margin: 16px 0 4px;
@@ -142,7 +142,7 @@
 
   .nav a,
   .nav p {
-    font-size: 20px;
+    font-size: 24px;
     display: block;
     margin: 3px 0;
   }
@@ -157,7 +157,7 @@
   }
 
   .nav p b {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bold;
   }
 

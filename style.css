@@ -129,18 +129,22 @@
   }
 
   .nav h4 {
-    font-size: 24px;
+    font-size: 26px;
     color: #fff;
     font-style: italic;
     margin: 16px 0 4px;
   }
 
-  .nav a {
-    display: block;
+  .nav a,
+  .nav p {
     font-size: 20px;
     color: #00ccff;
     text-decoration: none;
     margin: 3px 0;
+  }
+
+  .nav p {
+    color: #ffffff;
   }
 
   .nav a:hover {

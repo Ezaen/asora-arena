@@ -1,5 +1,11 @@
-/* === GLOBAL STYLES === */
-body {
+/* === GLOBAL RESET === */
+*:not(input):not(textarea) {
+    user-select: none;
+    outline: none;
+  }
+  
+  /* === GLOBAL STYLES === */
+  body {
     background-color: #b03134;
     margin: 0;
     font-family: Arial, sans-serif;
@@ -23,7 +29,7 @@ body {
   #logo {
     width: 768px;
     height: 434px;
-    background-image: url('https://imgur.com/KlSxySr.png');
+    background-image: url('https://imgur.com/UlwIQP0.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top left;
